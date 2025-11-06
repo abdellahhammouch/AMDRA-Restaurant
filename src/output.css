@@ -281,8 +281,29 @@
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
+  .w-\[3\/4\] {
+    width: 3/4;
+  }
   .w-\[30vw\] {
     width: 30vw;
+  }
+  .w-\[80\] {
+    width: 80;
+  }
+  .w-\[90\%\] {
+    width: 90%;
+  }
+  .w-\[90\] {
+    width: 90;
+  }
+  .w-\[100\%\] {
+    width: 100%;
+  }
+  .w-\[100\] {
+    width: 100;
+  }
+  .w-\[calc\(100\%-2rem\)\] {
+    width: calc(100% - 2rem);
   }
   .w-fit {
     width: fit-content;
@@ -425,6 +446,9 @@
   }
   .text-gray-700 {
     color: var(--color-gray-700);
+  }
+  .text-white {
+    color: var(--color-white);
   }
   .underline {
     text-decoration-line: underline;
