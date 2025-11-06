@@ -11,30 +11,31 @@
 
 <body>
 
-
+    <!-- nav bar responsible -->
     <nav class="">
       <div class="grid grid-cols-[1fr_100px_1fr] items-center">
 
         <div class="relative pl-2">
 
+          <!--logo burger menu  -->
           <span class="flex md:hidden flex-wrap w-8 hover: ">
             <span class="bg-black mb-1.5 h-1 w-full"></span>
             <span class="bg-black mb-1.5 h-1 w-3/5"></span>
             <span class="bg-black mb-1.5 h-1 w-full"></span>
           </span>
           
-          
+          <!-- lien d les pages lackren -->
           <ul class="hidden md:flex justify-evenly absolute md:static flex-col md:flex-row bg-black md:bg-transparent left-0 top-10  md:w-auto shadow-md md:shadow-none ml-2 ">
             <li class="text-gray-700 md:text-[#F59124] border-b-2 md:border-none border-white"> <a href="#">Home</a></li>
-            <li class="text-gray-700 md:text-[#F59124] border-b-2 md:border-none border-white"><a href="src/pages/menu.html">Menu</a></li>
-            <li class="text-gray-700 md:text-[#F59124] border-b-2 md:border-none border-white"><a href="src/pages/contact.html">About/Contact</a></li>
+            <li class="text-gray-700  border-b-2 md:border-none border-white"><a href="src/pages/menu.html">Menu</a></li>
+            <li class="text-gray-700  border-b-2 md:border-none border-white"><a href="src/pages/contact.html">About/Contact</a></li>
           </ul>
         </div>
-
+        <!-- logo de resteu -->
         <div class="justify-items-center">
           <img src="/src/images/AMDRA__logo.png" alt="logo-amdra" class="h-20" >
         </div>
-
+        <!-- input for recherche -->
         <div class="flex justify-evenly items-center">
             <div class="border border-e-black w-fit rounded-3xl flex items-center">
               <img src="src/images/search__logo.png" alt="logo of search " class="h-3.5 pl-1.5 cursor-pointer">
@@ -48,11 +49,34 @@
 
 
 
+<!-- hade sections d panier m9da abach tban ta tkmel mn ba3d b js dylha -->
+    <section class="absolute top-0 right-0 bg-gray-700">
+      <div class="relative h-screen w-[30vw] bg-white p-4 ">
 
-    <section class="">
-      <div class="absolute top-0 right-0 h-screen w-[30vw] bg-white">
-        
+        <div class="flex justify-between items-center">
+          <h2 class="text-2xl">My order</h2>
+          <img src="src/images/close.png" alt="logo of search " class="h-4  cursor-pointer pr-2.5 ">
+        </div>
+
+        <!-- blasaa dyal ga3 les order lakhren ta tgad b js -->
+        <div class="">
+
+        </div>
+        <!-- lhseab d lpanier kamla ta aydar f js -->
+        <div class="">
+
+
+        </div>
+
+        <!-- button de confirmer li aydek lpages payment -->
+        <div class="absolute bottom-6 w-full flex justify-center">
+          <a href="#" class=" w-3/4 bg-[#F59124] text-center text-xl p-3.5 rounded-3xl  ">Checkout</a>
+        </div>
+
       </div>
     </section>
+
+
+  <script src="script.js"></script>
 </body>
 </html>
