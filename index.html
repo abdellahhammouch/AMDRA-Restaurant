@@ -9,7 +9,7 @@
 </head>
 
 
-<body>
+<body class="overflow-hidden">
 
     <!-- nav bar responsible -->
     <nav class="">
@@ -41,7 +41,7 @@
               <img src="src/images/search__logo.png" alt="logo of search " class="h-3.5 pl-1.5 cursor-pointer">
               <input type="text" class="outline-none py-[3px] px-2 h-7 text-sm">
             </div>
-            <img src="src/images/panier__logo.png" alt="logo of panier" class="h-5 cursor-pointer">
+            <img id="navpanier__logo" src="src/images/panier__logo.png" alt="logo of panier" class="h-5 cursor-pointer">
         </div>
 
       </div>
@@ -50,12 +50,12 @@
 
 
 <!-- hade sections d panier m9da abach tban ta tkmel mn ba3d b js dylha -->
-    <section class="absolute top-0 right-0 ">
+    <section id="opensection__panierpage" class="absolute top-0 -right-1/2 transition-all duration-800 ">
       <div class="relative h-screen w-[30vw] bg-gray-700 p-4 ">
 
         <div class="flex justify-between items-center">
           <h2 class="text-2xl">My order</h2>
-          <img src="src/images/close.png" alt="logo of search " class="h-4  cursor-pointer pr-2.5 ">
+          <img id="closesection__panierpage" src="src/images/close.png" alt="logo of search " class="h-4  cursor-pointer pr-2.5 ">
         </div>
 
         <!-- blasaa dyal ga3 les order lakhren ta tgad b js -->
