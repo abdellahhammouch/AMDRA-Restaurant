@@ -8,9 +8,9 @@
       "price": 85.50,
       "image": "images/plats/Tagine-d'Agneau-aux-Prunes.png",
       "ingredients": [
-        { "name": "Agneau", "image": "https://example.com/images/ingredient_lamb.jpg" },
-        { "name": "Prunes", "image": "https://example.com/images/ingredient_prunes.jpg" },
-        { "name": "Amandes", "image": "https://example.com/images/ingredient_almonds.jpg" }
+        { "name": "Agneau", "image": "images/ingredient/Agneau.png" },
+        { "name": "Prunes", "image": "images/ingredient/Prunes.png" },
+        { "name": "Amandes", "image": "images/ingredient/Amandes.png" }
       ]
     },
     {
@@ -21,9 +21,9 @@
       "price": 70.00,
       "image": "images/plats/Couscous Royal.png",
       "ingredients": [
-        { "name": "Semoule", "image": "https://example.com/images/ingredient_semolina.jpg" },
-        { "name": "Poulet", "image": "https://example.com/images/ingredient_chicken.jpg" },
-        { "name": "Pois chiches", "image": "https://example.com/images/ingredient_chickpeas.jpg" }
+        { "name": "Semoule", "image": "images/ingredient/Semoule.png" },
+        { "name": "Poulet", "image": "images/ingredient/Poulet.png" },
+        { "name": "Pois chiches", "image": "images/ingredient/Pois chiches.png" }
       ]
     },
     {
@@ -34,9 +34,9 @@
       "price": 62.00,
       "image":"images/plats/Pastilla-au-Poulet.png",
       "ingredients": [
-        { "name": "Poulet", "image": "https://example.com/images/ingredient_chicken.jpg" },
-        { "name": "Amandes", "image": "https://example.com/images/ingredient_almonds.jpg" },
-        { "name": "Feuilles de brick", "image": "https://example.com/images/ingredient_phyllo.jpg" }
+        { "name": "Poulet", "image": "images/ingredient/Poulet.png" },
+        { "name": "Amandes", "image": "images/ingredient/Amandes.png" },
+        { "name": "Feuilles de brick", "image": "images/ingredient/Feuilles de brick.png" }
       ]
     },
     {
@@ -47,9 +47,9 @@
       "price": 45.00,
       "image": "mages/plats/Pizza-Margherita.png",
       "ingredients": [
-        { "name": "Tomate", "image": "https://example.com/images/ingredient_tomato.jpg" },
-        { "name": "Mozzarella", "image": "https://example.com/images/ingredient_mozzarella.jpg" },
-        { "name": "Basilic", "image": "https://example.com/images/ingredient_basil.jpg" }
+        { "name": "Tomate", "image": "images/ingredient/Tomate.png" },
+        { "name": "Mozzarella", "image": "images/ingredient/Mozzarella.png" },
+        { "name": "Basilic", "image": "images/ingredient/Basilic.png" }
       ]
     },
     {
@@ -60,9 +60,9 @@
       "price": 50.00,
       "image": "images/plats/Spaghetti Carbonara.pngg",
       "ingredients": [
-        { "name": "Spaghetti", "image": "https://example.com/images/ingredient_spaghetti.jpg" },
-        { "name": "Pancetta", "image": "https://example.com/images/ingredient_pancetta.jpg" },
-        { "name": "Pecorino", "image": "https://example.com/images/ingredient_pecorino.jpg" }
+        { "name": "Spaghetti", "image": "images/ingredient/Spaghetti.png" },
+        { "name": "Pancetta", "image": "images/ingredient/Pancetta.png" },
+        { "name": "Pecorino", "image": "images/ingredient/Pecorino.png" }
       ]
     },
     {
@@ -73,9 +73,9 @@
       "price": 35.00,
       "image": "images/plats/Tacos-al-Pastor.png",
       "ingredients": [
-        { "name": "Porc mariné", "image": "https://example.com/images/ingredient_pork.jpg" },
-        { "name": "Ananas", "image": "https://example.com/images/ingredient_pineapple.jpg" },
-        { "name": "Tortilla", "image": "https://example.com/images/ingredient_tortilla.jpg" }
+        { "name": "Porc mariné", "image": "images/ingredient/Porc mariné.png" },
+        { "name": "Ananas", "image": "images/ingredient/Ananas.png" },
+        { "name": "Tortilla", "image": "images/ingredient/Tortilla.png" }
       ]
     },
     {
@@ -86,9 +86,9 @@
       "price": 120.00,
       "image": "images/plats/Sushi-Assortimen.pngg",
       "ingredients": [
-        { "name": "Saumon", "image": "https://example.com/images/ingredient_salmon.jpg" },
-        { "name": "Riz vinaigré", "image": "https://example.com/images/ingredient_sushi_rice.jpg" },
-        { "name": "Algue Nori", "image": "https://example.com/images/ingredient_nori.jpg" }
+        { "name": "Saumon", "image": "images/ingredient/Saumon.png" },
+        { "name": "Riz vinaigré", "image": "images/ingredient/Riz vinaigré.png" },
+        { "name": "Algue Nori", "image": "images/ingredient/Algue Nori.png" }
       ]
     },
     {
@@ -99,9 +99,9 @@
       "price": 48.00,
       "image": "images/plats/Pad-Thai.png",
       "ingredients": [
-        { "name": "Nouilles de riz", "image": "https://example.com/images/ingredient_rice_noodles.jpg" },
-        { "name": "Crevettes", "image": "https://example.com/images/ingredient_shrimp.jpg" },
-        { "name": "Cacahuètes", "image": "https://example.com/images/ingredient_peanuts.jpg" }
+        { "name": "Nouilles de riz", "image": "images/ingredient/Nouilles de riz.png" },
+        { "name": "Crevettes", "image": "images/ingredient/Crevettes.png" },
+        { "name": "Cacahuètes", "image": "images/ingredient/Cacahuètes.png" }
       ]
     },
     {
@@ -112,9 +112,9 @@
       "price": 55.00,
       "image": "images/plats/Burger Gourmet.png",
       "ingredients": [
-        { "name": "Boeuf haché", "image": "https://example.com/images/ingredient_beef.jpg" },
-        { "name": "Cheddar", "image": "https://example.com/images/ingredient_cheddar.jpg" },
-        { "name": "Pain brioché", "image": "https://example.com/images/ingredient_brioche.jpg" }
+        { "name": "Boeuf haché", "image": "images/ingredient/Bœuf haché.png" },
+        { "name": "Cheddar", "image": "images/ingredient/Cheddar.png" },
+        { "name": "Pain brioché", "image": "images/ingredient/Pain brioché.png" }
       ]
     },
     {
@@ -125,9 +125,9 @@
       "price": 38.00,
       "image": "images/plats/Salade Niçoise.png",
       "ingredients": [
-        { "name": "Thon", "image": "https://example.com/images/ingredient_tuna.jpg" },
-        { "name": "Oeufs", "image": "https://example.com/images/ingredient_eggs.jpg" },
-        { "name": "Olives", "image": "https://example.com/images/ingredient_olives.jpg" }
+        { "name": "Thon", "image": "images/ingredient/Thon.png" },
+        { "name": "Oeufs", "image": "images/ingredient/oeufs.png" },
+        { "name": "Olives", "image": "images/ingredient/Olives.png" }
       ]
     },
     {
@@ -138,11 +138,12 @@
       "price": 30.00,
       "image": "images/plats/Shakshuka.png",
       "ingredients": [
-        { "name": "Oeufs", "image": "https://example.com/images/ingredient_eggs.jpg" },
-        { "name": "Tomates", "image": "https://example.com/images/ingredient_tomato.jpg" },
-        { "name": "Poivrons", "image": "https://example.com/images/ingredient_pepper.jpg" }
+        { "name": "Oeufs", "image": "images/ingredient/oeufs.png" },
+        { "name": "Tomates", "image": "images/ingredient/Tomate.png" },
+        { "name": "Poivrons", "image": "images/ingredient/Poivrons.pngg" }
       ]
     },
+    // ici
     {
       "id": 12,
       "name": "Falafel Wrap",
