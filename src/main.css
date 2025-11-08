@@ -10,22 +10,7 @@
 }
 
 
-/* font-inter */
-/* @font-face {
-  font-family: 'Inter';
-  src: url('./fonts/Inter-Regular.ttf') format('truetype');
-  font-weight: 400;
-} */
-
-@font-face {
-  font-family: 'Inter';
-  src: url('./fonts/Inter-Bold.ttf') format('truetype');
-  font-weight: 700;
-}
-.inter-font {
-  font-family: 'Inter';
-}
-
+/* afacad-font */
 @font-face {
   font-family: 'Afacad';
   src: url('./fonts/Afacad-Regular.ttf') format('truetype');
@@ -33,4 +18,15 @@
 }
 .afacad-font{
     font-family:'Afacad' ;
+}
+
+
+/* inter-font */
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+  
+}
+.inter-font{
+    font-family:'Inter' ;
 }
