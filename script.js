@@ -1,4 +1,4 @@
-
+// ==============================================================
 // start part dyal burger menu mobile and part of side bar panier
 
 const iconburgermeu = document.getElementById("nav__burgermnuicon");
@@ -21,11 +21,46 @@ iconpanier.addEventListener("click" , () => {
 
 paniersectionclose.addEventListener("click" , () => {
     paniersection.classList.add("-right-full"); 
-    paniersection.classList.remove("right-0")
+    paniersection.classList.remove("right-0");
 })
 
 // finish part dyal burger menu mobile and part of side bar panier
 
 
-//
+// =======================
+// start page de detailles 
+
+let plat ;
+
+fetch("/data.json")
+    .then(response  => {
+        if(!response.ok){
+            throw new Error("Erreur dans le chargement du fichier JSON");
+        }
+        return response.json();
+    })
+    .then(data => {
+        plat = data        
+    })
+    .catch(error => {console.error(error)})
+
+
+
+
+document.querySelectorAll(".pourDetails").forEach(el => {
+     el.addEventListener("click" , (e) => {
+        const id = e.currentTarget.dataset.id;
+        localStorage.setItem("courrentIdDeyails" , id );
+        location.href = "/src/pages/detail-menu.html";
+    })
+});
+
+
+console.log(localStorage.getItem("courrentIdDeyails"))
+
+
+
+
+
+
 
