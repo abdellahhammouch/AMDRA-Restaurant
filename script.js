@@ -40,23 +40,44 @@ fetch("/data.json")
         return response.json();
     })
     .then(data => {
-        plat = data        
+        plat = data    
+        if(window.location.pathname.includes("detail-menu.html")){
+            afficherDetails();
+        }    
     })
     .catch(error => {console.error(error)})
 
 
 
+    
+
 
 document.querySelectorAll(".pourDetails").forEach(el => {
      el.addEventListener("click" , (e) => {
+
         const id = e.currentTarget.dataset.id;
         localStorage.setItem("courrentIdDeyails" , id );
+
         location.href = "/src/pages/detail-menu.html";
+
     })
 });
 
+function afficherDetails() {
 
-console.log(localStorage.getItem("courrentIdDeyails"))
+    console.log();
+    const courrentId = localStorage.getItem("courrentIdDeyails");
+
+    for(ele of plat.dishes){
+        if(ele.id == courrentId) {
+            const detailsele = document.createElement("section")
+            detailsele.innerHtml = `  `
+        }
+    }
+
+}
+
+
 
 
 
