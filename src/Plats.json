@@ -143,7 +143,7 @@
         { "name": "Poivrons", "image": "images/ingredient/Poivrons.pngg" }
       ]
     },
-    // ici
+   
     {
       "id": 12,
       "name": "Falafel Wrap",
@@ -152,9 +152,9 @@
       "price": 28.00,
       "image": "images/plats/Falafel Wrap.png",
       "ingredients": [
-        { "name": "Pois chiches", "image": "https://example.com/images/ingredient_chickpeas.jpg" },
-        { "name": "Persil", "image": "https://example.com/images/ingredient_parsley.jpg" },
-        { "name": "Pain pita", "image": "https://example.com/images/ingredient_pita.jpg" }
+        { "name": "Pois chiches", "image": "images/ingredient/Pois chiches.pn" },
+        { "name": "Persil", "image": "images/ingredient/Persil.png" },
+        { "name": "Pain pita", "image": "images/ingredient/Pain pita.png" }
       ]
     },
     {
@@ -165,9 +165,9 @@
       "price": 65.00,
       "image": "images/plats/Ceviche de Poisson.png",
       "ingredients": [
-        { "name": "Poisson blanc", "image": "https://example.com/images/ingredient_white_fish.jpg" },
-        { "name": "Citron vert", "image": "https://example.com/images/ingredient_lime.jpg" },
-        { "name": "Coriandre", "image": "https://example.com/images/ingredient_coriander.jpg" }
+        { "name": "Poisson blanc", "image": "images/ingredient/Poisson blanc.png" },
+        { "name": "Citron vert", "image": "images/ingredient/Citron vert.png" },
+        { "name": "Coriandre", "image": "images/ingredient/Coriandre.png" }
       ]
     },
     {
@@ -178,9 +178,9 @@
       "price": 52.50,
       "image": "images/plats/Bibimbap.png",
       "ingredients": [
-        { "name": "Riz", "image": "https://example.com/images/ingredient_rice.jpg" },
-        { "name": "Kimchi", "image": "https://example.com/images/ingredient_kimchi.jpg" },
-        { "name": "Oeuf", "image": "https://example.com/images/ingredient_eggs.jpg" }
+        { "name": "Riz", "image": "images/ingredient/Riz vinaigré.png" },
+        { "name": "Kimchi", "image": "images/ingredient/Kimchi.png"},
+        { "name": "Oeuf", "image": "images/ingredient/oeufs.png" }
       ]
     },
     {
@@ -191,9 +191,9 @@
       "price": 46.00,
       "image": "images/plats/Gnocchi au Pesto.png",
       "ingredients": [
-        { "name": "Gnocchi", "image": "https://example.com/images/ingredient_gnocchi.jpg" },
-        { "name": "Basilic", "image": "https://example.com/images/ingredient_basil.jpg" },
-        { "name": "Pignons", "image": "https://example.com/images/ingredient_pine_nuts.jpg" }
+        { "name": "Gnocchi", "image": "images/ingredient/Gnocchi.png" },
+        { "name": "Basilic", "image": "images/ingredient/Basilic.png" },
+        { "name": "Pignons", "image": "images/ingredient/Pignons.png" }
       ]
     },
     {
@@ -204,9 +204,9 @@
       "price": 95.00,
       "image": "images/plats/Steak Frites.png",
       "ingredients": [
-        { "name": "Entrecôte", "image": "https://example.com/images/ingredient_ribeye.jpg" },
-        { "name": "Pommes de terre", "image": "https://example.com/images/ingredient_potatoes.jpg" },
-        { "name": "Beurre", "image": "https://example.com/images/ingredient_butter.jpg" }
+        { "name": "Entrecôte", "image": "images/ingredient/Entrecôte.png" },
+        { "name": "Pommes de terre", "image": "images/ingredient/Pommes de terre.png" },
+        { "name": "Beurre", "image": "images/ingredient/Beurre.png" }
       ]
     },
     {
@@ -217,9 +217,9 @@
       "price": 49.50,
       "image": "images/plats/Curry Vert au Poulet.png",
       "ingredients": [
-        { "name": "Poulet", "image": "https://example.com/images/ingredient_chicken.jpg" },
-        { "name": "Lait de coco", "image": "https://example.com/images/ingredient_coconut_milk.jpg" },
-        { "name": "Piment vert", "image": "https://example.com/images/ingredient_green_chili.jpg" }
+        { "name": "Poulet", "image": "images/ingredient/Poulet.png" },
+        { "name": "Lait de coco", "image": "images/ingredient/Lait de coco.png" },
+        { "name": "Piment vert", "image": "images/ingredient/Piment vert.png" }
       ]
     },
     {
@@ -230,9 +230,9 @@
       "price": 28.50,
       "image": "images/plats/Crêpes Suzette.png",
       "ingredients": [
-        { "name": "Farine", "image": "https://example.com/images/ingredient_flour.jpg" },
-        { "name": "Orange", "image": "https://example.com/images/ingredient_orange.jpg" },
-        { "name": "Beurre", "image": "https://example.com/images/ingredient_butter.jpg" }
+        { "name": "Farine", "image": "images/ingredient/Farine.png" },
+        { "name": "Orange", "image": "images/ingredient/Orange.png" },
+        { "name": "Beurre", "image": "images/ingredient/Beurre.png" }
       ]
     },
     {
@@ -243,9 +243,9 @@
       "price": 58.00,
       "image": "images/plats/Poke Bowl au Saumon.png",
       "ingredients": [
-        { "name": "Saumon", "image": "https://example.com/images/ingredient_salmon.jpg" },
-        { "name": "Avocat", "image": "https://example.com/images/ingredient_avocado.jpg" },
-        { "name": "Mangue", "image": "https://example.com/images/ingredient_mango.jpg" }
+        { "name": "Saumon", "image": "images/ingredient/Saumon.png" },
+        { "name": "Avocat", "image": "images/ingredient/Avocat.png" },
+        { "name": "Mangue", "image": "images/ingredient/Mangue.png" }
       ]
     },
     {
@@ -256,9 +256,9 @@
       "price": 22.00,
       "image": "images/plats/Baklava.png",
       "ingredients": [
-        { "name": "Noix", "image": "https://example.com/images/ingredient_nuts.jpg" },
-        { "name": "Phyllo", "image": "https://example.com/images/ingredient_phyllo.jpg" },
-        { "name": "Miel", "image": "https://example.com/images/ingredient_honey.jpg" }
+        { "name": "Noix", "image": "images/ingredient/Noix.png" },
+        { "name": "Phyllo", "image": "images/ingredient/Phyllo.png" },
+        { "name": "Miel", "image": "images/ingredient/Miel.png" }
       ]
     }
   ]
