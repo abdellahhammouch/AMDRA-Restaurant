@@ -9,10 +9,10 @@
 </head>
 
 
-<body class="overflow-hidden">
+<body class="">
 
     <!-- nav bar responsible -->
-    <nav class="">
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
       <div class="grid grid-cols-[1fr_100px_1fr] items-center">
 
         <div class="relative pl-2">
@@ -38,11 +38,20 @@
         <!-- input for recherche -->
         <div class="flex justify-evenly items-center">
             <div class="border border-e-black w-fit rounded-3xl flex items-center">
-              <img src="src/images/search__logo.png" alt="logo of search " class="h-3.5 pl-1.5 cursor-pointer">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 pl-1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+              </svg>
+
               <input type="text" class="outline-none py-[3px] px-2 h-7 text-sm">
             </div>
-            <img id="navpanier__logo" src="src/images/panier__logo.png" alt="logo of panier" class="h-5 cursor-pointer">
-        </div>
+
+            <svg id="navpanier__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="size-6 cursor-pointer">
+              <path d="M6 7h12a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1Z"/>
+              <path d="M9 7V6a3 3 0 0 1 6 0v1"/>
+            </svg>
+
+          </div>
 
       </div>
     </nav>
@@ -50,12 +59,15 @@
 
 
 <!-- hade sections d panier m9da abach tban ta tkmel mn ba3d b js dylha -->
-    <section id="opensection__panierpage" class="absolute top-0 -right-1/2 transition-all duration-800 ">
+    <section id="opensection__panierpage" class="fixed top-0 -right-full h-screen transition-all duration-700 z-50">
       <div class="relative h-screen w-[30vw] bg-gray-700 p-4 ">
 
         <div class="flex justify-between items-center">
           <h2 class="text-2xl">My order</h2>
-          <img id="closesection__panierpage" src="src/images/close.png" alt="logo of search " class="h-4  cursor-pointer pr-2.5 ">
+          <svg id="closesection__panierpage" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 cursor-pointer pr-2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+
         </div>
 
         <!-- blasaa dyal ga3 les order lakhren ta tgad b js -->

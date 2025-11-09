@@ -1,3 +1,6 @@
+
+// start part dyal burger menu mobile and part of side bar panier
+
 const iconburgermeu = document.getElementById("nav__burgermnuicon");
 const navlist = document.getElementById("nav__listul")
 const animburgermenu = document.getElementById("burgermenu__anim")
@@ -21,5 +24,8 @@ paniersectionclose.addEventListener("click" , () => {
     paniersection.classList.remove("right-0")
 })
 
+// finish part dyal burger menu mobile and part of side bar panier
 
+
+//
 
