@@ -1,12 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../output.css">
-    <title>AMDRA | Menu</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./../output.css" rel="stylesheet" />
+    <title>Responsive Carousel</title>
+    <style>
+      .carousel-container {
+        width: 100%;
+        max-width: 1200px;
+        position: relative;
+      }
+
+      .carousel-wrapper {
+        overflow: hidden;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 40px 20px;
+      }
+
+      .carousel-track {
+        display: flex;
+        transition: transform 0.4s ease-in-out;
+        gap: 20px;
+      }
+
+      .card {
+        flex: 0 0 calc(33.333% - 14px);
+        background: white;
+        border-radius: 20px;
+        padding: 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      .card-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        background: #f5f5f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 80px;
+      }
+
+      .card-content {
+        padding: 24px;
+        text-align: center;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card h3 {
+        color: #1a1a1a;
+        margin-bottom: 8px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .card p {
+        color: #666;
+        line-height: 1.5;
+        font-size: 14px;
+        margin: 0;
+      }
+
+      .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: white;
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        transition: all 0.3s ease;
+        z-index: 10;
+      }
+
+      .carousel-btn:hover {
+        background: #667eea;
+        color: white;
+        transform: translateY(-50%) scale(1.1);
+      }
+
+      .carousel-btn:active {
+        transform: translateY(-50%) scale(0.95);
+      }
+
+      .carousel-btn.prev {
+        left: 15px;
+      }
+
+      .carousel-btn.next {
+        right: 15px;
+      }
+
+      .carousel-btn:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+
+      .carousel-btn:disabled:hover {
+        background: white;
+        color: black;
+        transform: translateY(-50%) scale(1);
+      }
+
+      /* Tablet */
+      @media (max-width: 1024px) {
+        .card {
+          flex: 0 0 calc(50% - 10px);
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 640px) {
+        .card {
+          flex: 0 0 100%;
+        }
+
+        .carousel-wrapper {
+          padding: 30px 15px;
+        }
+
+        .carousel-btn {
+          width: 40px;
+          height: 40px;
+          font-size: 16px;
+        }
+
+        .carousel-btn.prev {
+          left: 15px;
+        }
+
+        .carousel-btn.next {
+          right: 15px;
+        }
+      }
+    </style>
+        <style>
+      .hero .images {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero .images img {
+        position: absolute;
+        z-index: 10;
+        max-width: 400px;
+        height: 400px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+        <nav
+      class="bg-gray-800 text-white fixed top-0 left-0 w-full h-14 z-50 shadow"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 h-full flex justify-between items-center"
+      >
+        <a href="#" class="text-lg font-semibold">Logo</a>
+        <div class="space-x-6">
+          <a href="#" class="hover:text-gray-300">Home</a>
+          <a href="#" class="hover:text-gray-300">About</a>
+          <a href="#" class="hover:text-gray-300">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+      <section
+        class="hero flex-wrap bg-ghoz px-10 py-32 min-h-screen flex justify-evenly items-center"
+      >
+        <h1 class="self-start text-4xl font-bold text-gray-800">
+          Nos Plats<br />
+          Spéciaux
+        </h1>
+        <div class="images"></div>
+        <div class="buttons flex flex-col gap-3"></div>
+      </section>
+
+    <section class="carousel-container mx-auto">
+      <button class="carousel-btn prev" id="prevBtn">‹</button>
+
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="carouselTrack"></div>
+      </div>
+
+      <button class="carousel-btn next" id="nextBtn">›</button>
+    </section>
+    <script src="./../js/promotion.js"></script>
+    <script src="./../js/main.js"></script>
+  </body>
 </html>
