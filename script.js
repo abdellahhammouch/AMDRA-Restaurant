@@ -71,7 +71,7 @@ function afficherDetails() {
     for(ele of plat.dishes){
         if(ele.id == courrentId) {
             const detailsele = document.createElement("section")
-            detailsele.innerHtml = `  `
+            detailsele.innerHTML = `  `
         }
     }
 
