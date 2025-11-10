@@ -27,6 +27,10 @@ paniersectionclose.addEventListener("click" , () => {
 // finish part dyal burger menu mobile and part of side bar panier
 
 
+
+
+
+
 // =======================
 // start page de detailles 
 
@@ -175,6 +179,16 @@ function afficherDetails() {
     }
 
 }
+
+
+
+
+
+
+
+
+
+// finish of this part 
 
 
 
