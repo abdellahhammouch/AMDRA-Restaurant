@@ -75,17 +75,16 @@ function afficherDetails() {
             let appn = document.getElementById("opensection__panierpage")
             detailsele.setAttribute("class" , "mt-28")
             detailsele.innerHTML = ` 
-                    
-            <div class="w-[80%] mx-auto flex bg-orange-50 rounded-3xl p-5">
+            <div class="w-[95%] md:w-[80%] mx-auto flex flex-col md:flex-row gap-7 bg-orange-50 rounded-3xl p-5">
 
-                <div class="w-1/2">
+              <div class="w-full md:w-1/2 ">
 
-                <div class="size-10/12">
-                    <img src="../${ele.image}" alt="" class="rounded-2xl bg-[#F7EDE1]">
+                <div class="w-full">
+                    <img src="../images/plat-test.png" alt="" class="rounded-2xl bg-[#F7EDE1]">
                 </div>
 
                 
-                <div class=" grid grid-cols-4 mt-3.5 w-10/12 justify-items-center">
+                <div class=" grid grid-cols-4 mt-3.5 w-full justify-items-center">
 
                     <div class="max-w-20 h-20 bg-white border-2 border-orange-500 rounded-xl">
                     <img src="../images/plat-test.png" alt="" class="">
@@ -107,7 +106,7 @@ function afficherDetails() {
 
                 </div>
 
-                <div class="w-1/2 ">
+                <div class="md:w-1/2  ">
 
                 <div class="">
                     <h3 class="text-7xl text-black font-bold mb-2">Tajine Royal</h3>
@@ -151,9 +150,9 @@ function afficherDetails() {
                     <span class="font-semibold">200 DH</span>
                     </div>
 
-                    <div class="grid grid-cols-[auto_1fr] gap-2 mt-2.5">
+                    <div class="md:grid grid-cols-[auto_1fr] gap-2 mt-2.5">
 
-                    <div class="flex items-center border-2 border-gray-200 rounded-4xl">
+                    <div class="flex justify-between items-center border-2 border-gray-200 rounded-4xl">
                         <button class="px-3 py-1 text-gray-600 hover:text-gray-900 ">-</button>
                         <span class="px-3 py-1 font-semibold">1</span>
                         <button class="px-3 py-1 text-gray-600 hover:text-gray-900">+</button>
