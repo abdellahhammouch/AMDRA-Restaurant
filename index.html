@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./src/output.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
 
-  <title>AMDRA | Home</title>
+    <title>AMDRA | Home</title>
 
-      <style>
+    <style>
       .hero .images {
         width: 400px;
         height: 400px;
@@ -17,108 +17,160 @@
 
       .hero .images img {
         position: absolute;
+        z-index: 10;
         max-width: 400px;
         height: 400px;
         object-fit: cover;
       }
     </style>
-</head>
+  </head>
 
-
-<body class="">
-
+  <body class="">
     <!-- nav bar responsible -->
     <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
       <div class="grid grid-cols-[1fr_100px_1fr] items-center">
-
         <div class="relative pl-2">
-
           <!--logo burger menu  -->
-          <span id="nav__burgermnuicon" class="flex md:hidden flex-wrap w-8 hover: ">
+          <span
+            id="nav__burgermnuicon"
+            class="flex md:hidden flex-wrap w-8 hover:"
+          >
             <span class="bg-black mb-1.5 h-1 w-full"></span>
-            <span id="burgermenu__anim" class="bg-black mb-1.5 h-1 w-3/5 transition-all duration-300"></span>
+            <span
+              id="burgermenu__anim"
+              class="bg-black mb-1.5 h-1 w-3/5 transition-all duration-300"
+            ></span>
             <span class="bg-black mb-1.5 h-1 w-full"></span>
           </span>
-          
+
           <!-- lien d les pages lackren -->
-          <ul id="nav__listul" class="hidden md:flex justify-evenly absolute md:static flex-col md:flex-row bg-black md:bg-transparent left-0 top-10  md:w-auto shadow-md md:shadow-none ml-2 ">
-            <li class="text-gray-700 md:text-[#F59124] border-b-2 md:border-none border-white"> <a href="#">Home</a></li>
-            <li id="" class="text-gray-700  border-b-2 md:border-none border-white"><a href="src/pages/menu.html">Menu</a></li>
-            <li class="text-gray-700  border-b-2 md:border-none border-white"><a href="src/pages/contact.html">About/Contact</a></li>
+          <ul
+            id="nav__listul"
+            class="hidden md:flex justify-evenly absolute md:static flex-col md:flex-row bg-black md:bg-transparent left-0 top-10 md:w-auto shadow-md md:shadow-none ml-2"
+          >
+            <li
+              class="text-gray-700 md:text-[#F59124] border-b-2 md:border-none border-white"
+            >
+              <a href="/index.html">Home</a>
+            </li>
+            <li
+              id=""
+              class="text-gray-700 border-b-2 md:border-none border-white"
+            >
+              <a href="./src/pages/menu.html">Menu</a>
+            </li>
+            <li class="text-gray-700 border-b-2 md:border-none border-white">
+              <a href="src/pages/contact.html">About/Contact</a>
+            </li>
           </ul>
         </div>
         <!-- logo de resteu -->
         <div class="justify-items-center">
-          <img src="/src/images/AMDRA__logo.png" alt="logo-amdra" class="h-20" >
+          <img
+            src="/src/images/AMDRA__logo.png"
+            alt="logo-amdra"
+            class="h-20"
+          />
         </div>
         <!-- input for recherche -->
         <div class="flex justify-between lg:justify-evenly items-center">
-            <div class="border border-e-black  md:w-auto  rounded-3xl flex items-center">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 pl-1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-              </svg>
-
-              <input type="text" class="shrink w-[90px] sm:w-auto outline-none py-[3px] px-2 h-7 text-sm">
-            </div>
-
-            <svg id="navpanier__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="size-6 cursor-pointer">
-              <path d="M6 7h12a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1Z"/>
-              <path d="M9 7V6a3 3 0 0 1 6 0v1"/>
+          <div
+            class="border border-e-black md:w-auto rounded-3xl flex items-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 pl-1.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              />
             </svg>
 
+            <input
+              type="text"
+              class="shrink w-[90px] sm:w-auto outline-none py-[3px] px-2 h-7 text-sm"
+            />
           </div>
 
+          <svg
+            id="navpanier__logo"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="size-6 cursor-pointer"
+          >
+            <path
+              d="M6 7h12a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1Z"
+            />
+            <path d="M9 7V6a3 3 0 0 1 6 0v1" />
+          </svg>
+        </div>
       </div>
     </nav>
 
-
-
-<!-- hade sections d panier m9da abach tban ta tkmel mn ba3d b js dylha -->
-    <section id="opensection__panierpage" class="fixed top-0 -right-full h-screen transition-all duration-700 z-50">
-      <div class="relative h-screen w-[30vw] bg-gray-700 p-4 ">
-
+    <!-- hade sections d panier m9da abach tban ta tkmel mn ba3d b js dylha -->
+    <section
+      id="opensection__panierpage"
+      class="fixed top-0 -right-full h-screen transition-all duration-700 z-50"
+    >
+      <div class="relative h-screen w-[30vw] bg-gray-700 p-4">
         <div class="flex justify-between items-center">
           <h2 class="text-2xl">My order</h2>
-          <svg id="closesection__panierpage" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 cursor-pointer pr-2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          <svg
+            id="closesection__panierpage"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-8 cursor-pointer pr-2.5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
           </svg>
-
         </div>
 
         <!-- blasaa dyal ga3 les order lakhren ta tgad b js -->
-        <div class="">
-
-        </div>
+        <div class=""></div>
         <!-- lhseab d lpanier kamla ta aydar f js -->
-        <div class="">
-
-
-        </div>
+        <div class=""></div>
 
         <!-- button de confirmer li aydek lpages payment -->
         <div class="absolute bottom-6 w-[calc(100%-2rem)] flex justify-center">
-          <a href="#" class=" w-3/4  bg-[#F59124] text-center text-xl p-3.5 rounded-3xl text-white  ">Checkout</a>
+          <a
+            href="#"
+            class="w-3/4 bg-[#F59124] text-center text-xl p-3.5 rounded-3xl text-white"
+            >Checkout</a
+          >
         </div>
-
       </div>
     </section>
 
-
     <section
-        class="hero flex-wrap bg-ghoz px-10 py-32 min-h-screen flex justify-evenly items-center"
-      >
-        <h1 class="self-start text-4xl font-bold text-gray-800">
-          Nos Plats<br />
-          Spéciaux
-        </h1>
-        <div class="images"></div>
-        <div class="buttons flex flex-col gap-3"></div>
-      </section>
+      class="hero flex-wrap bg-ghoz px-10 py-32 min-h-screen flex justify-evenly items-center"
+    >
+      <h1 class="self-start text-4xl font-bold text-gray-800">
+        Nos Plats<br />
+        Spéciaux
+      </h1>
+      <div class="images"></div>
+      <div class="buttons flex flex-col gap-3"></div>
+    </section>
 
-
-  <script src="script.js"></script>
-  <script src="./src/js/main.js"></script>
-
-</body>
+    <script src="script.js"></script>
+    <script src="./src/js/main.js"></script>
+  </body>
 </html>

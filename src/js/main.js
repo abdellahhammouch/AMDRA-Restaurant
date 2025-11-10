@@ -10,6 +10,11 @@ let HeroImages = [
     url: "/src/images/test.png",
   },
   {
+    name: "salad",
+    // url: "./src/images/fattoush-salad.png",
+    url: "/src/images/test.png",
+  },
+  {
     name: "meat-salad",
     // url: "./src/images/meat-salad.png",
     url: "/src/images/test.png",
@@ -43,11 +48,12 @@ function printHeroSection() {
     // create the buttons
     const btn = document.createElement("button");
 
-    if (i > Math.ceil(buttonCount / 2)) {
+    if (i+1 > Math.ceil(buttonCount / 2)) {
       leftSpace -= 20;
     } else if (i < Math.ceil(buttonCount / 2)) {
       leftSpace += 20;
     }
+    
   btn.style.transform = `translateX(${leftSpace}px)`;
 
     btn.textContent = image.name;
@@ -55,8 +61,8 @@ function printHeroSection() {
       "btn",
       "px-4",
       "py-2",
-      "rounded",
-      "bg-blue-600",
+      "rounded-full",
+      "bg-limoni",
       "text-white"
     );
     btn.setAttribute("data-index", i);
@@ -66,7 +72,7 @@ function printHeroSection() {
       btn.classList.remove("bg-blue-600", "text-white");
       btn.classList.add(
         "border-2",
-        "border-indigo-500",
+        "border-limoni",
         "bg-transparent",
         "text-black"
       );
@@ -86,7 +92,7 @@ function printHeroSection() {
       document.querySelectorAll(".hero .buttons button").forEach((b) => {
         b.classList.remove(
           "border-2",
-          "border-indigo-500",
+          "border-limoni",
           "bg-transparent",
           "text-black"
         );
@@ -98,7 +104,7 @@ function printHeroSection() {
       clickedButton.target.classList.remove("bg-blue-600", "text-white");
       clickedButton.target.classList.add(
         "border-2",
-        "border-indigo-500",
+        "border-limoni",
         "bg-transparent",
         "text-black"
       );
@@ -110,8 +116,6 @@ function printHeroSection() {
       const newImage = document.querySelector(
         `.hero .images img[data-index="${newImageIndex}"]`
       );
-
-      console.log(previousImage, newImage);
 
       newImage.style.transition = "none";
       newImage.style.transform = "translateX(200%)";
@@ -127,7 +131,7 @@ function printHeroSection() {
     `;
       selectedIndex = newImageIndex;
 
-      newImage.addEventListener(
+      previousImage.addEventListener(
         "transitionend",
         () => {
           isAnimating = false;
