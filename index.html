@@ -1,11 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./src/output.css" rel="stylesheet">
 
-  <title>AMDRA</title>
+  <title>AMDRA | Home</title>
+
+      <style>
+      .hero .images {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero .images img {
+        position: absolute;
+        max-width: 400px;
+        height: 400px;
+        object-fit: cover;
+      }
+    </style>
 </head>
 
 
@@ -89,6 +105,20 @@
     </section>
 
 
+    <section
+        class="hero flex-wrap bg-ghoz px-10 py-32 min-h-screen flex justify-evenly items-center"
+      >
+        <h1 class="self-start text-4xl font-bold text-gray-800">
+          Nos Plats<br />
+          Spéciaux
+        </h1>
+        <div class="images"></div>
+        <div class="buttons flex flex-col gap-3"></div>
+      </section>
+
+
   <script src="script.js"></script>
+  <script src="./src/js/main.js"></script>
+
 </body>
 </html>
