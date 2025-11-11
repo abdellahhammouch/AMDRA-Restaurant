@@ -7,7 +7,9 @@ const animburgermenu = document.getElementById("burgermenu__anim")
 const iconpanier = document.getElementById("navpanier__logo")
 const paniersection = document.getElementById("opensection__panierpage")
 const paniersectionclose = document.getElementById("closesection__panierpage")
-
+let element ;
+let panierelement = []
+let cointer = 1 ;
 
 iconburgermeu.addEventListener("click" , () =>{
     navlist.classList.toggle("hidden")
@@ -49,13 +51,10 @@ fetch("/src/plats.json")
             afficherDetails();
         }    
     })
-    .catch(error => {console.error(error)})
+    .catch(error => console.error(error))
 
 
 function afficherDetails() {
-    console.log("heeey");
-    
-    console.log();
     const courrentId = localStorage.getItem("courrentIdDetails");
     const courrentCategorie = localStorage.getItem("courrentcategorieDetails");
 
@@ -66,6 +65,9 @@ function afficherDetails() {
                 const detailsele = document.createElement("section")
                 let appn = document.querySelector("nav")
                 detailsele.setAttribute("class" , "mt-28")
+
+                element = ele ;
+
                 detailsele.innerHTML = ` 
                 <div class="w-[95%] md:w-[80%] mx-auto flex flex-col md:flex-row gap-7 bg-orange-50 rounded-3xl p-5">
     
@@ -139,19 +141,19 @@ function afficherDetails() {
     
                         <div class="flex justify-between border-b border-gray-300">
                         <span class="font-bold ">Total Price</span>
-                        <span class="font-semibold">200 DH</span>
+                        <span class="font-semibold">${ele.price}$</span>
                         </div>
     
                         <div class="md:grid grid-cols-[auto_1fr] gap-2 mt-2.5">
     
                         <div class="flex justify-between items-center border-2 border-gray-200 rounded-4xl">
-                            <button class="px-3 py-1 text-gray-600 hover:text-gray-900 ">-</button>
-                            <span class="px-3 py-1 font-semibold">1</span>
-                            <button class="px-3 py-1 text-gray-600 hover:text-gray-900">+</button>
+                            <button id="decreaseContiter" class="px-3 py-1 text-gray-600 hover:text-gray-900 ">-</button>
+                            <span id="cantiterOrder" class="px-3 py-1 font-semibold">${cointer}</span>
+                            <button id="increaseContiter" class="px-3 py-1 text-gray-600 hover:text-gray-900">+</button>
                         </div>
     
                         <div class="">
-                            <button class="w-full bg-amber-600 text-center p-1.5 rounded-4xl text-white ">Add to cart</button>
+                            <button id="buttonAdd" class="w-full bg-amber-600 text-center p-1.5 rounded-4xl text-white ">Add to cart</button>
                         </div>
                         </div>
     
@@ -269,13 +271,42 @@ function afficherDetails() {
                 </div>
                 `
                 appn.after(detailsele);
-    
+                
             }
         }
     }
-
+    
+    addPanierPAgeDEtails()
 }
 
+
+
+function addPanierPAgeDEtails(){
+    let incrementcont = document.querySelector("#increaseContiter")
+    let decreascont = document.querySelector("#decreaseContiter")
+    let contiter = document.querySelector("#cantiterOrder")
+
+
+
+    incrementcont.addEventListener("click" , (e) => {
+        cointer++ ;
+        contiter.textContent = cointer
+    })
+    decreascont.addEventListener("click" , (e) => {
+        if(cointer > 1){
+            cointer-- ;
+        }
+        contiter.textContent = cointer
+    })
+
+
+    
+
+    document.getElementById("buttonAdd").addEventListener("click" , (e) => {
+        
+    
+    })
+}
 
 
 
