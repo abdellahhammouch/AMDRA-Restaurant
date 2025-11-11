@@ -24,14 +24,14 @@ function fetcheApi() {
                         <h3 class="inter-font font-semibold text-[15px] cursor-pointer pourDetails"  data-id="${ele.id}" data-categhorie="dishes"  titlePlat">${ele.name}</h3>
                         <h4 class="inter-font font-semibold PricePlat"><span class="text-[#FF6868] text-[12px]">$</span>${ele.price}</h4>
                     </div>
-                    <p class="inter-font text-[#555555] text-[13px] descriptionPlat  w-[13rem]">${ele.description}</p>
-                    <div class="sizeAndBtnAddToCart w-[13rem] flex  justify-between items-center ">
+                    <p class="inter-font text-[#555555] text-[13px] descriptionPlat  w-52">${ele.description}</p>
+                    <div class="sizeAndBtnAddToCart w-52 flex  justify-between items-center ">
                         <div class="flex w-1/2 justify-between sizesPlat">
                             <div class="S  bg-black text-white w-7 h-7 text-center rounded-[5px] smalSize">S</div>
                             <div class="M  bg-white text-black w-7 h-7 text-center rounded-[5px] border meduimSize">M</div>
                             <div class="L bg-white text-black w-7 h-7 text-center rounded-[5px] border largSize">L</div>
                         </div>
-                        <button class="btnAddToCart w-7/12 h-8 bg-[#F59124] rounded-[8px] ml-2 text-white">+ To Cart</button>
+                        <button class="btnAddToCart w-7/12 h-8 bg-limoni rounded-lg ml-2 text-white">+ To Cart</button>
                     </div>`
                     ;
                 sectionCards.appendChild(div);

@@ -388,6 +388,9 @@
   .w-3\/5 {
     width: calc(3/5 * 100%);
   }
+  .w-5 {
+    width: calc(var(--spacing) * 5);
+  }
   .w-7 {
     width: calc(var(--spacing) * 7);
   }
@@ -1104,6 +1107,11 @@
   .md\:text-\[\#F59124\] {
     @media (width >= 48rem) {
       color: #F59124;
+    }
+  }
+  .md\:text-limoni {
+    @media (width >= 48rem) {
+      color: var(--color-limoni);
     }
   }
   .md\:shadow-none {

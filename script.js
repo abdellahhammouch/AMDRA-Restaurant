@@ -179,26 +179,26 @@ function afficherDetails() {
                   <div class="w-full md:w-1/2 ">
     
                     <div class="w-full">
-                        <img src="../images/plat-test.png" alt="" class="rounded-2xl bg-[#F7EDE1]">
+                        <img src="../${ele.image}" alt="" class="rounded-2xl  bg-[#F7EDE1]">
                     </div>
     
                     
                     <div class=" grid grid-cols-4 mt-3.5 w-full justify-items-center">
     
-                        <div class="max-w-20 h-20 bg-white border-2 border-orange-500 rounded-xl">
-                        <img src="../images/plat-test.png" alt="" class="">
+                        <div class="max-w-20 h-20 bg-white border-2 border-gray-200 rounded-xl">
+                        <img src="../${ele.image}" alt="" class="">
                         </div>
     
                         <div class="max-w-20 h-20 bg-white border-2 border-gray-200 rounded-xl">
-                        <img src="../images/plat-test.png" alt="" class="">
+                        <img src="../${ele.image}" alt="" class="">
                         </div>
     
                         <div class="max-w-20 h-20 bg-white border-2 border-gray-200 rounded-xl">
-                        <img src="../images/plat-test.png" alt="" class="">
+                        <img src="../${ele.image}" alt="" class="">
                         </div>
     
                         <div class="max-w-20 h-20 bg-white border-2 border-gray-200 rounded-xl">
-                        <img src="../images/plat-test.png" alt="" class="">
+                        <img src="../${ele.image}" alt="" class="">
                         </div>
                         
                     </div>
@@ -208,24 +208,24 @@ function afficherDetails() {
                     <div class="md:w-1/2  ">
     
                     <div class="">
-                        <h3 class="text-7xl text-black font-bold mb-2">Tajine Royal</h3>
-                        <p class="text-orange-500 text-xl pb-3 pl-1 border-b border-gray-300">85 DH</p>
+                        <h3 class="text-7xl text-black font-bold mb-2">${ele.name}</h3>
+                        <p class="text-orange-500 text-xl pb-3 pl-1 border-b border-gray-300">${ele.price}$</p>
                     </div>
     
                     <div class="pl-1 border-b border-gray-300 ">
-                        <p class="text-2xl p-1.5 ">Un tajine marocain authentique préparé avec des morceaux tendres d'agneau, des pruneaux moelleux, des amandes grillées et un mélange d'épices traditionnel. Mijoté lentement selon la recette ancestrale de nos grands-mères pour une saveur incomparable.</p>
+                        <p class="text-2xl p-1.5 ">${ele.description}.</p>
                     </div>
     
                     <div class="flex gap-3 items-center  pl-1 border-b border-gray-300 ">
                         <p class="font-bold">ingredients</p>
                         <div class="size-12 grid items-center">
-                        <img src="../images/Ananas.png" alt="" class="w-10/12 rounded border ">
+                        <img src="../${ele.ingredients[0].image}" alt="" class="w-10/12 rounded border ">
                         </div>
                         <div class="size-12 grid items-center">
-                        <img src="../images/Ananas.png" alt="" class="w-10/12 rounded border">
+                        <img src="../${ele.ingredients[1].image}" alt="" class="w-10/12 rounded border">
                         </div>
                         <div class="size-12 grid items-center">
-                        <img src="../images/Ananas.png" alt="" class="w-10/12 rounded border">
+                        <img src="../${ele.ingredients[2].image}" alt="" class="w-10/12 rounded border">
                         </div>
                         
                     </div>
