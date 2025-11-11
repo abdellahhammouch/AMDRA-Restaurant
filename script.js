@@ -129,7 +129,7 @@ function afficherDetails() {
                         <span class="font-bold py-2">Size</span>
     
                         <div class="">
-                        <button class="px-2 py-0.5 rounded-md border bg-black text-white ">S</button>
+                        <button id= class="px-2 py-0.5 rounded-md border bg-black text-white ">S</button>
                         <button class="px-2 py-0.5 rounded-md border ">M</button>
                         <button class="px-2 py-0.5 rounded-md border ">L</button>
                         
@@ -153,7 +153,7 @@ function afficherDetails() {
                         </div>
     
                         <div class="">
-                            <button id="buttonAdd" class="w-full bg-amber-600 text-center p-1.5 rounded-4xl text-white ">Add to cart</button>
+                            <button id="buttonAdd" type="submit" class="w-full bg-amber-600 text-center p-1.5 rounded-4xl text-white ">Add to cart</button>
                         </div>
                         </div>
     
@@ -286,8 +286,6 @@ function addPanierPAgeDEtails(){
     let decreascont = document.querySelector("#decreaseContiter")
     let contiter = document.querySelector("#cantiterOrder")
 
-
-
     incrementcont.addEventListener("click" , (e) => {
         cointer++ ;
         contiter.textContent = cointer
@@ -298,13 +296,13 @@ function addPanierPAgeDEtails(){
         }
         contiter.textContent = cointer
     })
-
-
     
+
 
     document.getElementById("buttonAdd").addEventListener("click" , (e) => {
         
-    
+
+        
     })
 }
 

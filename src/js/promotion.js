@@ -1,5 +1,5 @@
 const fetchPromotions = () =>
-  fetch("../../data.json")
+  fetch("../Plats.json")
     .then((response) => response.json())
     .then((data) => {
       const promotionContainer = document.querySelector(".carousel-track");

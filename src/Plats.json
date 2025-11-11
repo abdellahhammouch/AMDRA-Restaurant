@@ -1,4 +1,58 @@
 {
+  "promotions": [
+     {
+      "id": 1,
+      "name": "Tagine d'Agneau",
+      "category": "Moroccan",
+      "description": "Tagine d'agneau mijoté avec des prunes, épices douces et amandes grillées.",
+      "price": 85.50,
+      "image": "images/plats/Tagine-d'Agneau-aux-Prunes.svg",
+      "ingredients": [
+        { "name": "Agneau", "image": "images/ingredient/Agneau.png" },
+        { "name": "Prunes", "image": "images/ingredient/Prunes.png" },
+        { "name": "Amandes", "image": "images/ingredient/Amandes.png" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Couscous Royal",
+      "category": "Moroccan",
+      "description": "Couscous traditionnel servi avec un assortiment de viande, légumes et pois chiches.",
+      "price": 70.00,
+      "image": "images/plats/Couscous Royal.svg",
+      "ingredients": [
+        { "name": "Semoule", "image": "images/ingredient/Semoule.png" },
+        { "name": "Poulet", "image": "images/ingredient/Poulet.png" },
+        { "name": "Pois chiches", "image": "images/ingredient/Pois chiches.png" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Pastilla au Poulet",
+      "category": "Moroccan",
+      "description": "Tourte croustillante sucrée-salée au poulet, amandes et cannelle.",
+      "price": 62.00,
+      "image":"images/plats/Pastilla-au-Poulet.svg",
+      "ingredients": [
+        { "name": "Poulet", "image": "images/ingredient/Poulet.png" },
+        { "name": "Amandes", "image": "images/ingredient/Amandes.png" },
+        { "name": "Feuilles de brick", "image": "images/ingredient/Feuilles de brick.png" }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Pizza Margherita",
+      "category": "Italian",
+      "description": "Classique pizza italienne avec tomate, mozzarella et basilic.",
+      "price": 45.00,
+      "image": "images/plats/Pizza-Margherita.svg",
+      "ingredients": [
+        { "name": "Tomate", "image": "images/ingredient/Tomate.png" },
+        { "name": "Mozzarella", "image": "images/ingredient/Mozzarella.png" },
+        { "name": "Basilic", "image": "images/ingredient/Basilic.png" }
+      ]
+    }
+  ],
   "dishes": [
     {
       "id": 1,
