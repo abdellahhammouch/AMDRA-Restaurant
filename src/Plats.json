@@ -135,7 +135,7 @@
     {
       "id": 7,
       "name": "Sushi Assortiment",
-      "category": "Japanese",
+      "category": "Mexican",
       "description": "Plateau varié de nigiri, maki et sashimi frais.",
       "price": 120.00,
       "image": "images/plats/Sushi-Assortimen.svg",
@@ -148,7 +148,7 @@
     {
       "id": 8,
       "name": "Pad Thai",
-      "category": "Thai",
+      "category": "Mexican",
       "description": "Nouilles sautées au tamarin, crevettes, cacahuètes et pousses de soja.",
       "price": 48.00,
       "image": "images/plats/Pad-Thai.svg",
@@ -161,7 +161,7 @@
     {
       "id": 9,
       "name": "Burger Gourmet",
-      "category": "American",
+      "category": "Mexican",
       "description": "Burger maison avec steak haché, cheddar, oignons caramélisés et sauce spéciale.",
       "price": 55.00,
       "image": "images/plats/Burger Gourmet.svg",
@@ -174,7 +174,7 @@
     {
       "id": 10,
       "name": "Salade Niçoise",
-      "category": "French",
+      "category": "Italian",
       "description": "Salade classique avec thon, oeufs, olives, haricots verts et pommes de terre.",
       "price": 38.00,
       "image": "images/plats/Salade Niçoise.svg",
@@ -187,7 +187,7 @@
     {
       "id": 11,
       "name": "Shakshuka",
-      "category": "Middle Eastern",
+      "category": "Moroccan",
       "description": "Oeufs pochés dans une sauce tomate aux poivrons et épices.",
       "price": 30.00,
       "image": "images/plats/Shakshuka.svg",
@@ -201,7 +201,7 @@
     {
       "id": 12,
       "name": "Falafel Wrap",
-      "category": "Middle Eastern",
+      "category": "Mexican",
       "description": "Wrap croustillant garnis de falafels, crudités et sauce tahini.",
       "price": 28.00,
       "image": "images/plats/Falafel Wrap.svg",
@@ -214,7 +214,7 @@
     {
       "id": 13,
       "name": "Ceviche de Poisson",
-      "category": "Peruvian",
+      "category": "Moroccan",
       "description": "Poisson mariné au citron vert, piment et coriandre, servi frais.",
       "price": 65.00,
       "image": "images/plats/Ceviche de Poisson.svg",
@@ -227,7 +227,7 @@
     {
       "id": 14,
       "name": "Bibimbap",
-      "category": "Korean",
+      "category": "Moroccan",
       "description": "Bol coréen avec riz, légumes sautés, béchamel de piment et oeuf.",
       "price": 52.50,
       "image": "images/plats/Bibimbap.svg",
@@ -253,7 +253,7 @@
     {
       "id": 16,
       "name": "Steak Frites",
-      "category": "French",
+      "category": "Mexican",
       "description": "Entrecôte grillée servie avec frites croustillantes et beurre maître d'hotel.",
       "price": 95.00,
       "image": "images/plats/Steak Frites.svg",
@@ -279,7 +279,7 @@
     {
       "id": 18,
       "name": "Crêpes Suzette",
-      "category": "Dessert",
+      "category": "Italian",
       "description": "Crêpes fines flambées à l'orange et au curaçao, servies chaudes.",
       "price": 28.50,
       "image": "images/plats/Crêpes Suzette.svg",
@@ -305,7 +305,7 @@
     {
       "id": 20,
       "name": "Baklava",
-      "category": "Dessert",
+      "category": "Italian",
       "description": "Feuilleté sucré aux couches de phyllo, noix et sirop au miel.",
       "price": 22.00,
       "image": "images/plats/Baklava.svg",
