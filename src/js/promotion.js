@@ -11,7 +11,7 @@ const fetchPromotions = () =>
 
         promotionItem.innerHTML = `
                     <div class="card-image">
-                      <img src="./${item.image}"/></div>
+                      <img src="../${item.image}"/></div>
                     <div class="card-content">
                         <h3>Browse All 1</h3>
                         <p>(255 Items)</p>

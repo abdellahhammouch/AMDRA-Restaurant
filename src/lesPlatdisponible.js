@@ -11,6 +11,29 @@ const sizes = ["small", "medium", "large"];
 
 const panier = JSON.parse(localStorage.getItem("panier")) || [];
 let cartItems = [];
+let filteredCartItems = [];
+
+let page = 1;
+let perPage = 6;
+
+document.querySelector(".left-pagination").addEventListener("click", (e) => {
+  if (page == 1) {
+    alert("you are in the end of left pagination");
+  } else {
+    page--;
+    afficherPlat();
+  }
+});
+
+document.querySelector(".right-pagination").addEventListener("click", (e) => {
+  count = filteredCartItems.length;
+  if (page == Math.ceil(count / perPage)) {
+    alert("you are in the end of right pagination");
+  } else {
+    page++;
+    afficherPlat();
+  }
+});
 
 try {
   fetcheApi();
@@ -19,12 +42,14 @@ try {
 } finally {
   console.log("toujour");
 }
+
 function fetcheApi() {
   fetch("../Plats.json")
     .then((resp) => resp.json())
     .then((data) => {
       cartItems = data.dishes;
-      afficherPlat(data.dishes);
+      filteredCartItems = cartItems;
+      afficherPlat();
     });
 }
 
@@ -32,7 +57,6 @@ function fetcheApi() {
 filtrerLesPlats();
 function filtrerLesPlats() {
   MoroccanCategorie.addEventListener("click", () => {
-    // console.log('hello');
     btnAll.setAttribute(
       "class",
       "btnAll text-black border w-22 rounded-[10px]"
@@ -54,18 +78,18 @@ function filtrerLesPlats() {
     fetch("../Plats.json")
       .then((resp) => resp.json())
       .then((data) => {
-        console.log(data);
-
-        const MorocanPlat = data.dishes.filter(
+        // const MorocanPlat = data.dishes.filter(
+        filteredCartItems = data.dishes.filter(
           (ele) => ele.category === "Moroccan"
         );
-        afficherPlat(MorocanPlat);
+        page = 1;
+        afficherPlat();
+        // afficherPlat(MorocanPlat);
       });
   });
 
   //italian
   ItalianCategorie.addEventListener("click", () => {
-    // console.log('hello');
     ItalianCategorie.setAttribute(
       "class",
       "ItalianCategorie bg-black text-white w-22 h-7 rounded-[10px]"
@@ -83,23 +107,19 @@ function filtrerLesPlats() {
       "MexicanCategorie text-black border w-22 rounded-[10px]"
     );
 
-    sectionCards.innerHTML = "";
     fetch("../Plats.json")
       .then((resp) => resp.json())
       .then((data) => {
-        console.log(data);
-
-        const ItalianPlat = data.dishes.filter(
+        filteredCartItems = data.dishes.filter(
           (ele) => ele.category === "Italian"
         );
-
-        afficherPlat(ItalianPlat);
+        page = 1;
+        afficherPlat();
       });
   });
 
   //mexican
   MexicanCategorie.addEventListener("click", () => {
-    // console.log('hello');
     MexicanCategorie.setAttribute(
       "class",
       "MexicanCategorie bg-black text-white w-22 h-7 rounded-[10px]"
@@ -121,13 +141,11 @@ function filtrerLesPlats() {
     fetch("../Plats.json")
       .then((resp) => resp.json())
       .then((data) => {
-        console.log(data);
-
-        const MexicanPlat = data.dishes.filter(
+        filteredCartItems = data.dishes.filter(
           (ele) => ele.category === "Mexican"
         );
-
-        afficherPlat(MexicanPlat);
+        page = 1;
+        afficherPlat();
       });
   });
 
@@ -168,17 +186,23 @@ function filtrerLesPlats() {
 }
 
 //afficher les plats
-function afficherPlat(Plats) {
-  Plats.forEach((ele) => {
+function afficherPlat() {
+  let start = (page - 1) * perPage;
+  sectionCards.innerHTML = "";
+
+  for (let i = start; i < start + perPage; i++) {
+    if (i >= filteredCartItems.length) {
+      break;
+    }
+
+    const ele = filteredCartItems[i];
+
     div = document.createElement("div");
     div.setAttribute("class", "oneCard");
-    // div.setAttribute('data-id', ele.id);
-    // div.cssText="w-60 h-80  shadow-2xl rounded-\[8px\] flex flex-col  items-center justify-evenly";
     div.setAttribute(
       "class",
       "w-60 h-80  rounded-[8px] flex flex-col  items-center justify-evenly shadow-[0px_5px_15px_rgba(0, 0, 0, 0.35)] "
     );
-    // console.log(ele.image);
 
     div.innerHTML = `
              <img src="../${ele.image}" class="w-45 oneCardImgPlat" alt="none">
@@ -198,7 +222,9 @@ function afficherPlat(Plats) {
             `;
     sectionCards.appendChild(div);
 
-    const relatedBtn = document.querySelector(`.btnAddToCart[data-id="${ele.id}"]`);
+    const relatedBtn = document.querySelector(
+      `.btnAddToCart[data-id="${ele.id}"]`
+    );
 
     relatedBtn.addEventListener("click", (e) => {
       const selectedSize = e.target.getAttribute("data-size");
@@ -219,9 +245,7 @@ function afficherPlat(Plats) {
       localStorage.setItem("panier", JSON.stringify(panier));
       alert("Plat ajouter au panier");
     });
-
-
-  });
+  }
 
   const sizes = document.querySelectorAll(".size");
 
