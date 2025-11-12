@@ -1,5 +1,4 @@
-// ==============================================================
-// start part dyal burger menu mobile and part of side bar panier
+// start part dyal burger menu mobile and part of side bar thePanier
 
 const iconburgermeu = document.getElementById("nav__burgermnuicon");
 const navlist = document.getElementById("nav__listul")
@@ -8,7 +7,7 @@ const iconpanier = document.getElementById("navpanier__logo")
 const paniersection = document.getElementById("opensection__panierpage")
 const paniersectionclose = document.getElementById("closesection__panierpage")
 // let element ;
-const panier = JSON.parse(localStorage.getItem("panier")) || [];
+const thePanier = JSON.parse(localStorage.getItem("thePanier")) || [];
 let cointer = 1 ;
 
 iconburgermeu.addEventListener("click" , () =>{
@@ -26,7 +25,7 @@ paniersectionclose.addEventListener("click" , () => {
     paniersection.classList.remove("right-0");
 })
 
-// finish part dyal burger menu mobile and part of side bar panier
+// finish part dyal burger menu mobile and part of side bar thePanier
 
 
 
@@ -38,7 +37,7 @@ paniersectionclose.addEventListener("click" , () => {
 
 let plat ;
 
-fetch("/src/plats.json")
+fetch("/src/Plats.json")
     .then(response  => {
         if(!response.ok){
             throw new Error("Erreur dans le chargement du fichier JSON");
