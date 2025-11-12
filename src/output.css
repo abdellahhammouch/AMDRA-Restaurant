@@ -1106,6 +1106,11 @@
       color: #F59124;
     }
   }
+  .md\:text-limoni {
+    @media (width >= 48rem) {
+      color: var(--color-limoni);
+    }
+  }
   .md\:shadow-none {
     @media (width >= 48rem) {
       --tw-shadow: 0 0 #0000;

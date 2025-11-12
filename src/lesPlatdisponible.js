@@ -207,19 +207,20 @@ function afficherPlat() {
     div.innerHTML = `
              <img src="../${ele.image}" class="w-45 oneCardImgPlat" alt="none">
             <div class="titleAndPrice w-52 flex justify-between">
-                <h3 class="inter-font font-semibold text-[15px] data-id="${ele.id}" data-categhorie=""  titlePlat">${ele.name}</h3>
+                        <h3 class="inter-font font-semibold text-[15px] cursor-pointer pourDetails"  data-id="${ele.id}" data-categhorie="dishes"  titlePlat">${ele.name}</h3>
                 <h4 class="inter-font font-semibold PricePlat"><span class="text-[#FF6868] text-[12px]">$</span>${ele.price}</h4>
             </div>
-            <p class="inter-font text-[#555555] text-[13px] descriptionPlat  w-[13rem]">${ele.description}</p>
-            <div class="sizeAndBtnAddToCart w-[13rem] flex  justify-between items-center ">
+            <p class="inter-font text-[#555555] text-[13px] descriptionPlat  w-52">${ele.description}</p> 
+            <div class="sizeAndBtnAddToCart w-52 flex  justify-between items-center ">
                 <div class="flex w-1/2 justify-between sizesPlat">
                     <div data-id="${ele.id}"  data-size="small" class="cursor-pointer size S  bg-black text-white w-7 h-7 text-center rounded-[5px] smalSize">S</div>
                     <div data-id="${ele.id}"  data-size="medium" class="cursor-pointer size M  bg-white text-black w-7 h-7 text-center rounded-[5px] border meduimSize">M</div>
                     <div data-id="${ele.id}"  data-size="large" class="cursor-pointer size L bg-white text-black w-7 h-7 text-center rounded-[5px] border largSize">L</div>
                 </div>
-                <button data-id="${ele.id}" data-size="small" class="btnAddToCart w-7/12 h-8 bg-[#F59124] rounded-[8px] ml-2 text-white">+ To Cart</button>
+                <button data-id="${ele.id}" data-size="small" class="btnAddToCart w-7/12 h-8 bg-limoni rounded-lg ml-2 text-white">+ To Cart</button>
             </div>
             `;
+
     sectionCards.appendChild(div);
 
     const relatedBtn = document.querySelector(
@@ -246,6 +247,22 @@ function afficherPlat() {
       alert("Plat ajouter au panier");
     });
   }
+
+  
+
+  document.querySelectorAll(".pourDetails").forEach(el => {
+    el.addEventListener("click", (e) => {
+
+      const id = e.currentTarget.dataset.id;
+      const categorie = e.currentTarget.dataset.categhorie;
+
+      localStorage.setItem("courrentcategorieDetails", categorie);
+      localStorage.setItem("courrentIdDetails", id);
+
+      location.href = "/src/pages/detail-menu.html";
+
+    })
+  });
 
   const sizes = document.querySelectorAll(".size");
 
