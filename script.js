@@ -7,8 +7,8 @@ const animburgermenu = document.getElementById("burgermenu__anim")
 const iconpanier = document.getElementById("navpanier__logo")
 const paniersection = document.getElementById("opensection__panierpage")
 const paniersectionclose = document.getElementById("closesection__panierpage")
-let element ;
-let panierelement = []
+// let element ;
+const panier = JSON.parse(localStorage.getItem("panier")) || [];
 let cointer = 1 ;
 
 iconburgermeu.addEventListener("click" , () =>{
@@ -66,7 +66,7 @@ function afficherDetails() {
                 let appn = document.querySelector("nav")
                 detailsele.setAttribute("class" , "mt-28")
 
-                element = ele ;
+                // element = ele ;
 
                 detailsele.innerHTML = ` 
                 <div class="w-[95%] md:w-[80%] mx-auto flex flex-col md:flex-row gap-7 bg-orange-50 rounded-3xl p-5">
@@ -278,6 +278,13 @@ function afficherDetails() {
     
     addPanierPAgeDEtails()
 }
+
+
+function afiichdata(){
+    
+}
+
+
 
 
 
