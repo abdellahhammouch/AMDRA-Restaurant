@@ -29,6 +29,9 @@ document.getElementById("btnPDF").addEventListener("click", () => {
     alert("Commande bien envoyée");
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
+    let panier = JSON.parse(localStorage.getItem("panier")) || [];
+    let line = 90;
+
 
     doc.setFontSize(22);
     doc.setTextColor(255, 87, 34);
@@ -40,11 +43,16 @@ document.getElementById("btnPDF").addEventListener("click", () => {
     doc.text(`Téléphone : ${phone}`, 20, 60);
     doc.text(`Adresse : ${adresse}`, 20, 70);
     doc.text(`Email : ${email}`, 20, 80);
-
-    doc.text(`Total : ${somme}$`, 20, 90);
+    panier.forEach((element) => {
+    doc.text(`${element.name} : ${element.quantity * element.price} `, 20, line);
+    somme += element.quantity * element.price; 
+    line += 10
+    });
+    doc.text(`Total : ${somme}$`, 20, line);
+    line += 10
     doc.setFontSize(14);
     doc.setTextColor(0, 150, 0);
-    doc.text(`Merci pour votre commande`, 20, 100);
+    doc.text(`Merci pour votre commande`, 20, line);
     doc.save("commande.pdf");
     // localStorage.removeItem("panier")
 });
