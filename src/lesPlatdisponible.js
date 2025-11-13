@@ -6,6 +6,8 @@ let ItalianCategorie = document.querySelector(".ItalianCategorie");
 let MexicanCategorie = document.querySelector(".MexicanCategorie");
 //search input
 let input=document.querySelector(".inputSearch .input");
+//select esarch categorie
+let categorieSelect=document.querySelector(".categorieSelect")
 
 try {
     fetcheApi();
@@ -26,6 +28,39 @@ function fetcheApi() {
 //fonction qui permet de filter les plat selon la categorie et rechercher selon le nom
 filtrerLesPlats()
 function filtrerLesPlats() {
+    categorieSelect.addEventListener('change',()=>{
+        // console.log(typeof categorieSelect.value); 
+        // console.log(categorieSelect.value==="Moroccan");
+        sectionCards.innerHTML = "";
+         if (categorieSelect.value=="All") {
+            fetcheApi();
+            }
+        
+        if (categorieSelect.value=="Moroccan") {
+            fetch("../Plats.json").then(resp => resp.json())
+            .then(data => {
+                // console.log(data);
+            const MorocanPlat = data.dishes.filter(ele => ele.category === "Moroccan");
+            // console.log(MorocanPlat);            
+            afficherPlat(MorocanPlat);
+            })
+        }
+        if (categorieSelect.value==="Mexican") {
+            fetch("../Plats.json").then(resp => resp.json())
+            .then(data => {
+            const MexicanPlat = data.dishes.filter(ele => ele.category === "Mexican");
+                afficherPlat(MexicanPlat)
+            })
+        }
+        if (categorieSelect.value==="Italian") {
+            fetch("../Plats.json").then(resp => resp.json())
+            .then(data => {
+            const ItalianPlat = data.dishes.filter(ele => ele.category === "Italian");
+                afficherPlat(ItalianPlat)
+            })
+            }
+    })
+
     MoroccanCategorie.addEventListener('click', () => {
         // console.log('hello');
         btnAll.setAttribute("class", "btnAll text-black border w-22 rounded-[10px]");
@@ -36,7 +71,7 @@ function filtrerLesPlats() {
         sectionCards.innerHTML = "";
         fetch("../Plats.json").then(resp => resp.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
 
                 const MorocanPlat = data.dishes.filter(ele => ele.category === "Moroccan");
                 afficherPlat(MorocanPlat)
@@ -57,7 +92,7 @@ function filtrerLesPlats() {
         sectionCards.innerHTML = "";
         fetch("../Plats.json").then(resp => resp.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
 
                 const ItalianPlat = data.dishes.filter(ele => ele.category === "Italian");
 
@@ -79,7 +114,7 @@ function filtrerLesPlats() {
         sectionCards.innerHTML = "";
         fetch("../Plats.json").then(resp => resp.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
 
                 const MexicanPlat = data.dishes.filter(ele => ele.category === "Mexican");
 
@@ -102,7 +137,7 @@ function filtrerLesPlats() {
         sectionCards.innerHTML = "";
         fetch("../Plats.json").then(resp => resp.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
 
                 const platRechercher= data.dishes.filter(ele => ele.name.toLowerCase().includes(inputvalue) );
 
@@ -116,13 +151,13 @@ function filtrerLesPlats() {
 //afficher les plats
 function afficherPlat(Plats) {
     Plats.forEach(ele => {
+
         div = document.createElement("div");
         div.setAttribute('class', "oneCard");
         // div.setAttribute('data-id', ele.id);
         // div.cssText="w-60 h-80  shadow-2xl rounded-\[8px\] flex flex-col  items-center justify-evenly";
         div.setAttribute('class', 'w-60 h-80  rounded-[8px] flex flex-col  items-center justify-evenly shadow mt-5 hover:scale-104 transition delay-150 duration-500 border border-transparent hover:border-[#F59124] py-3');
         // console.log(ele.image);
-
         div.innerHTML = `
              <img src="../${ele.image}" class="w-45 oneCardImgPlat" alt="none">
             <div class="titleAndPrice w-52 flex justify-between">
