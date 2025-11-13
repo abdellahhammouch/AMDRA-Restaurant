@@ -23,7 +23,7 @@ document.getElementById("btnPDF").addEventListener("click", () => {
       alert("Veuillez entrer une adresse e-mail valide.");
       return;
     }
-    alert("Commande bien envoyée ");
+    alert("Commande bien envoyée");
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
@@ -33,7 +33,6 @@ document.getElementById("btnPDF").addEventListener("click", () => {
 
     doc.setFontSize(12);
     doc.setTextColor(50, 50, 50);
-
     doc.text(`Nom : ${name}`, 20, 50);
     doc.text(`Téléphone : ${phone}`, 20, 60);
     doc.text(`Adresse : ${adresse}`, 20, 70);
