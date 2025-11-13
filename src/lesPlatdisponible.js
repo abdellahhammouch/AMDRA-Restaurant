@@ -55,6 +55,7 @@ function fetcheApi() {
 
 //fonction qui permet de filter les plat selon la categorie et rechercher selon le nom
 filtrerLesPlats();
+
 function filtrerLesPlats() {
   MoroccanCategorie.addEventListener("click", () => {
     btnAll.setAttribute(
@@ -236,11 +237,11 @@ function afficherPlat() {
       );
 
       if (existingCartItem) {
-        existingCartItem.quantity += 1;
+        existingCartItem.quantity += quantity;
       } else {
         const cart = cartItems.find((item) => item.id == selectedId);
 
-        panier.push({ ...cart, size: selectedSize, quantity: 1 });
+        panier.push({ ...cart, size: selectedSize, quantity: quantity });
       }
 
       localStorage.setItem("panier", JSON.stringify(panier));
@@ -291,4 +292,6 @@ function afficherPlat() {
       });
     });
   });
+
+
 }
