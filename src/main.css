@@ -262,14 +262,14 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: bounce 3s infinite ease-in-out;
+  animation: bounce 3s infinite;
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translate(-50%, -50%) scaleY(1.12); }
-  25% { transform: translate(-50%, calc(-50% - 8px)) scaleY(1.18); }
-  50% { transform: translate(-50%, -50%) sc aleY(1.12); }
-  75% { transform: translate(-50%, calc(-50% + 8px)) scaleY(1.18); }
+  0%, 100% {transform: translate(-50%, -50%) scaleY(1.12);}
+  25% {transform: translate(-50%, -58%) scaleY(1.18);}
+  50% {transform: translate(-50%, -50%) scaleY(1.12);}
+  75% {transform: translate(-50%, -42%) scaleY(1.18);}
 }
 
 .pizzacont {
