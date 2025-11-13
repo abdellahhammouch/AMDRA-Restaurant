@@ -293,6 +293,7 @@ function afiichdatapanier(){
     let elepanier = JSON.parse(localStorage.getItem("panier")) || [];
 
     panierpart.innerHTML = ``
+    priceplice.innerHTML = ``
 
     for(ele of elepanier){
         let cart = document.createElement("div")
@@ -319,15 +320,16 @@ function afiichdatapanier(){
                 </div>
         `;
         pricepart.innerHTML = `
-            <div class="flex justify-between px-10 py-2">
+            <div class="flex justify-between px-10 py-2 ">
               <h2 class=" font-bold">${ele.name}</h2>
-              <span class="text-[#767676]">${ele.price * ele.quantity}</span>
+              <span  class="calctotal text-[#767676]">${ele.price * ele.quantity}</span>
             </div>
         `
         panierpart.append(cart);
         priceplice.append(pricepart)
         
     }
+    pricepanier()
 }
 
 
@@ -340,25 +342,33 @@ document.querySelector("#placeofpurchases").addEventListener("click" , (e) => {
     }
     if(e.target.closest(".increse")){
     const incqonti = e.target.closest(".increse");
-    const cart = panier.find((item) => item.id == incqonti.dataset.id);
-      if(cart.quantity > 1){
-        cart.quantity-- ;
-        cart.textContent = cart.quantity ;
-      }
+    const cart = panier.find((item) => item.id == incqonti.dataset.id && item.size == incqonti.dataset.size);
+
+    if(cart.quantity > 1){
+      cart.quantity-- ;
+      const spanmod = incqonti.closest("div").querySelector(".quantityafficher");
+      spanmod.textContent = cart.quantity;
+     }
     localStorage.setItem("panier", JSON.stringify(panier)); 
     }
     if(e.target.closest(".decrease")){
-    const decrqunti = e.target.closest(".decrease");
-    const cart = panier.find((item) => item.id == decrqunti.dataset.id);
-    cart.quantity++ ;
-    cart.textContent = cart.quantity ;
-    localStorage.setItem("panier", JSON.stringify(panier));
+      const decrqunti = e.target.closest(".decrease");
+      const cart = panier.find((item) => item.id == decrqunti.dataset.id && item.size == decrqunti.dataset.size);
+      cart.quantity++ ;
+      const spanmod = decrqunti.closest("div").querySelector(".quantityafficher");
+      spanmod.textContent = cart.quantity;
+      localStorage.setItem("panier", JSON.stringify(panier));
     }
   
 
 })
 
 function pricepanier(){
-  let priceplice = document.querySelector("#priceplace")
-  let priceelement = document.querySelector("")
+  document.querySelectorAll(".calctotal").forEach((ele) => {
+    let totalprice ;
+    totalprice += ele.textContent ;
+    // document.querySelector("#totalprice")
+    
+  })
+  
 }
