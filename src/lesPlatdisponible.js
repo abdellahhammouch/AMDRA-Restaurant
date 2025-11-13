@@ -1,5 +1,4 @@
-function pagemenu(){
-  let sectionCards = document.querySelector(".cards");
+let sectionCards = document.querySelector(".cards");
 //les btncategorie
 let btnAll = document.querySelector(".btnAll");
 let MoroccanCategorie = document.querySelector(".MoroccanCategorie");
@@ -313,8 +312,6 @@ function afficherPlat() {
 
 
 
-}
-
 // afficher panier 
 
 
@@ -437,9 +434,7 @@ document.querySelector("#condirmererPurshach").addEventListener("click" , (e) =>
 
 
 
-if (window.location.pathname.includes("menu.html")) {
-  pagemenu();
-}
+
 
 
 
