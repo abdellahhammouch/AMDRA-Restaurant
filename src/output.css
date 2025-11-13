@@ -907,6 +907,9 @@
   .text-white {
     color: var(--color-white);
   }
+  .italic {
+    font-style: italic;
+  }
   .shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -1340,7 +1343,7 @@ body {
     transform: translate(-50%, calc(-50% - 8px)) scaleY(1.18);
   }
   50% {
-    transform: translate(-50%, -50%) scaleY(1.12);
+    transform: translate(-50%, -50%) sc aleY(1.12);
   }
   75% {
     transform: translate(-50%, calc(-50% + 8px)) scaleY(1.18);

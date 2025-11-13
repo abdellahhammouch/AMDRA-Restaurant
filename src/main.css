@@ -268,7 +268,7 @@ body {
 @keyframes bounce {
   0%, 100% { transform: translate(-50%, -50%) scaleY(1.12); }
   25% { transform: translate(-50%, calc(-50% - 8px)) scaleY(1.18); }
-  50% { transform: translate(-50%, -50%) scaleY(1.12); }
+  50% { transform: translate(-50%, -50%) sc aleY(1.12); }
   75% { transform: translate(-50%, calc(-50% + 8px)) scaleY(1.18); }
 }
 
