@@ -326,7 +326,7 @@ function afiichdatapanier(){
     for(ele of elepanier){
         let cart = document.createElement("div")
         // let pricepart = document.createElement("div")
-        cart.setAttribute("class" , "grid grid-cols-[2fr_3fr_1.5fr] bg-white rounded-3xl p-3 gap-2 mb-5")
+        cart.setAttribute("class" , "grid grid-cols-[50px_3fr_1.5fr] bg-white rounded-3xl p-3 gap-2 mb-5")
         cart.innerHTML = `
                 <div class="p-2 flex items-center justify-center">
                     <img src="/src/${ele.image}" alt="logo_plat" class="w-full h-auto rounded-xl">
