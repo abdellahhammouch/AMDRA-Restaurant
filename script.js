@@ -55,6 +55,9 @@ fetch("/src/plats.json")
         if(window.location.pathname.includes("detail-menu.html")){
             afficherDetails();
         }    
+        if(window.location.pathname.incrementcont("payment.html")){
+
+        }
     })
     .catch(error => console.error(error))
 
@@ -327,6 +330,8 @@ function addPanierPAgeDEtails(){
 
 
 
+
+// page payment 
 
 
 

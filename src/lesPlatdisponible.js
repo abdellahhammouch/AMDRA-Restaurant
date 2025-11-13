@@ -288,16 +288,16 @@ function afficherPlat(Plats) {
 
 function afiichdatapanier(){
     let panierpart = document.querySelector("#placeofpurchases")
-    let priceplice = document.querySelector("#priceplace")
+    // let priceplice = document.querySelector("#priceplace")
 
     let elepanier = JSON.parse(localStorage.getItem("panier")) || [];
 
     panierpart.innerHTML = ``
-    priceplice.innerHTML = ``
+    // priceplice.innerHTML = ``
 
     for(ele of elepanier){
         let cart = document.createElement("div")
-        let pricepart = document.createElement("div")
+        // let pricepart = document.createElement("div")
         cart.setAttribute("class" , "grid grid-cols-[2fr_3fr_1.5fr] bg-white rounded-3xl p-3 gap-2 mb-5")
         cart.innerHTML = `
                 <div class="p-2 flex items-center justify-center">
@@ -319,14 +319,14 @@ function afiichdatapanier(){
                     </div>
                 </div>
         `;
-        pricepart.innerHTML = `
-            <div class="flex justify-between px-10 py-2 ">
-              <h2 class=" font-bold">${ele.name}</h2>
-              <span  class="calctotal text-[#767676]">${ele.price * ele.quantity}</span>
-            </div>
-        `
+        // pricepart.innerHTML = `
+        //     <div class="flex justify-between px-10 py-2 ">
+        //       <h2 class=" font-bold">${ele.name}</h2>
+        //       <span  class="calctotal text-[#767676]">${ele.price * ele.quantity}</span>
+        //     </div>
+        // `
         panierpart.append(cart);
-        priceplice.append(pricepart)
+        // priceplice.append(pricepart)
         
     }
     pricepanier()
@@ -334,23 +334,26 @@ function afiichdatapanier(){
 
 
 document.querySelector("#placeofpurchases").addEventListener("click" , (e) => {
-  if(e.target.closest(".suppresions")){
+    if(e.target.closest(".suppresions")){
     const deleteCard = e.target.closest(".suppresions");
     panier = panier.filter((item) => !(item.id == deleteCard.dataset.id && item.size == deleteCard.dataset.size));
     localStorage.setItem("panier", JSON.stringify(panier));
     afiichdatapanier()
     }
+
     if(e.target.closest(".increse")){
     const incqonti = e.target.closest(".increse");
     const cart = panier.find((item) => item.id == incqonti.dataset.id && item.size == incqonti.dataset.size);
-
+    
     if(cart.quantity > 1){
       cart.quantity-- ;
       const spanmod = incqonti.closest("div").querySelector(".quantityafficher");
       spanmod.textContent = cart.quantity;
      }
-    localStorage.setItem("panier", JSON.stringify(panier)); 
+    localStorage.setItem("panier", JSON.stringify(panier));
+    pricepanier();
     }
+
     if(e.target.closest(".decrease")){
       const decrqunti = e.target.closest(".decrease");
       const cart = panier.find((item) => item.id == decrqunti.dataset.id && item.size == decrqunti.dataset.size);
@@ -358,17 +361,45 @@ document.querySelector("#placeofpurchases").addEventListener("click" , (e) => {
       const spanmod = decrqunti.closest("div").querySelector(".quantityafficher");
       spanmod.textContent = cart.quantity;
       localStorage.setItem("panier", JSON.stringify(panier));
+      pricepanier();
     }
   
 
 })
 
 function pricepanier(){
-  document.querySelectorAll(".calctotal").forEach((ele) => {
-    let totalprice ;
-    totalprice += ele.textContent ;
-    // document.querySelector("#totalprice")
-    
-  })
+  console.log("rah bit nzid ashbi");
+  let elepanier = JSON.parse(localStorage.getItem("panier")) || [];
+  let priceplice = document.querySelector("#priceplace")
+  let totalprice = 0;
+  let totalpriceplace = document.querySelector("#totalprice")
+  totalpriceplace.innerHTML = ``
+  priceplice.innerHTML = ``
+  for(ele of elepanier){
+    let pricepart = document.createElement("div")
+     pricepart.innerHTML = `
+            <div class="flex justify-between px-10 py-2 ">
+              <h2 class=" font-bold">${ele.name}</h2>
+              <span  class="calctotal text-[#767676]">${ele.price * ele.quantity}</span>
+            </div>
+        `
+        priceplice.append(pricepart)
+  }
+  document.querySelectorAll(".calctotal").forEach((ele) => {    
+    let eletotalprice = document.createElement("div")
+    totalprice = totalprice + Number(ele.textContent) ;
+    eletotalprice.setAttribute("class" , "flex justify-between px-10 py-2 border-t-2")
+    eletotalprice.innerHTML = `
+        <h2 class=" font-bold">Total</h2>
+        <span class="text-[#767676]">${totalprice}$</span>
+    `
+    totalpriceplace.append(eletotalprice);
+    })
+
   
 }
+
+
+document.querySelector("#condirmererPurshach").addEventListener("click" , (e) => {
+  
+})
