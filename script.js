@@ -8,8 +8,9 @@ const iconpanier = document.getElementById("navpanier__logo")
 const paniersection = document.getElementById("opensection__panierpage")
 const paniersectionclose = document.getElementById("closesection__panierpage")
 // let element ;
-const panier = JSON.parse(localStorage.getItem("panier")) || [];
 let cointer = 1 ;
+
+
 
 iconburgermeu.addEventListener("click" , () =>{
     navlist.classList.toggle("hidden")
@@ -26,10 +27,14 @@ paniersectionclose.addEventListener("click" , () => {
     paniersection.classList.remove("right-0");
 })
 
+
+
+
+
 // finish part dyal burger menu mobile and part of side bar panier
 
 
-
+// panier bar js 
 
 
 
@@ -61,7 +66,6 @@ function afficherDetails() {
     if(courrentCategorie == "dishes"){        
         for(ele of plat.dishes){
             if(ele.id == courrentId) {
-                console.log(ele);
                 const detailsele = document.createElement("section")
                 let appn = document.querySelector("nav")
                 detailsele.setAttribute("class" , "mt-28")
@@ -168,7 +172,6 @@ function afficherDetails() {
             }
         }
     }else if(courrentCategorie == "promotions"){
-        console.log("rah dkhalt lpromo");
         for(ele of plat.promotions){
             if(ele.id == courrentId) {
                 console.log(ele);
@@ -279,10 +282,6 @@ function afficherDetails() {
     addPanierPAgeDEtails()
 }
 
-
-function afiichdata(){
-    
-}
 
 
 
