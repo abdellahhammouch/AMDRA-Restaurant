@@ -82,13 +82,12 @@ function filtrerLesPlats() {
     fetch("../Plats.json")
       .then((resp) => resp.json())
       .then((data) => {
-        // const MorocanPlat = data.dishes.filter(
         filteredCartItems = data.dishes.filter(
           (ele) => ele.category === "Moroccan"
         );
         page = 1;
+        input.value = "";
         afficherPlat();
-        // afficherPlat(MorocanPlat);
       });
   });
 
@@ -118,6 +117,8 @@ function filtrerLesPlats() {
           (ele) => ele.category === "Italian"
         );
         page = 1;
+        input.value = "";
+
         afficherPlat();
       });
   });
@@ -149,6 +150,8 @@ function filtrerLesPlats() {
           (ele) => ele.category === "Mexican"
         );
         page = 1;
+        input.value = "";
+
         afficherPlat();
       });
   });
@@ -170,6 +173,8 @@ function filtrerLesPlats() {
       "class",
       "MexicanCategorie text-black border w-22 rounded-[10px]"
     );
+        input.value = "";
+
     fetcheApi();
   });
 
@@ -180,11 +185,12 @@ function filtrerLesPlats() {
     fetch("../Plats.json")
       .then((resp) => resp.json())
       .then((data) => {
-        const platRechercher = data.dishes.filter((ele) =>
-          ele.name.toLowerCase().includes(inputvalue)
+        filteredCartItems = data.dishes.filter(
+          (ele) => ele.name.toLowerCase().includes(inputvalue)
         );
+        page = 1;
 
-        afficherPlat(platRechercher);
+        afficherPlat();
       });
   });
 }
@@ -415,7 +421,6 @@ function pricepanier(){
     `
     totalpriceplace.append(eletotalprice);
     // })
-
   
 }
 
