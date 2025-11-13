@@ -6,7 +6,6 @@ const iconpanier = document.getElementById("navpanier__logo")
 const paniersection = document.getElementById("opensection__panierpage")
 const paniersectionclose = document.getElementById("closesection__panierpage")
 
-const thePanier = JSON.parse(localStorage.getItem("thePanier")) || [];
 
 iconburgermeu.addEventListener("click" , () =>{
     navlist.classList.toggle("hidden")

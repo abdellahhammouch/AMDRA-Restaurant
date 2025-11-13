@@ -272,43 +272,41 @@
     </nav>
 
     <!-- hade sections d panier m9da abach tban ta tkmel mn ba3d b js dylha -->
-    <section
-      id="opensection__panierpage"
-      class="fixed top-0 -right-full h-screen transition-all duration-700 z-50"
-    >
-      <div class="relative h-screen w-[30vw] bg-gray-700 p-4">
-        <div class="flex justify-between items-center">
+    <section id="opensection__panierpage" class="fixed top-0 right-0  h-screen transition-all duration-700 z-50 ">
+      <div class="relative h-screen w-[30vw] bg-gray-100 shadow-2xl p-4 ">
+
+        <div class="flex justify-between items-center mb-7">
           <h2 class="text-2xl">My order</h2>
-          <svg
-            id="closesection__panierpage"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-8 cursor-pointer pr-2.5"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 18 18 6M6 6l12 12"
-            />
+          <svg id="closesection__panierpage" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 cursor-pointer pr-2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
           </svg>
+
         </div>
 
         <!-- blasaa dyal ga3 les order lakhren ta tgad b js -->
-        <div class=""></div>
+        <div class="h-[60vh] overflow-y-scroll ">
+          <div id="placeofpurchases">
+          
+          </div>
+        </div>
+         
+        
+    
         <!-- lhseab d lpanier kamla ta aydar f js -->
-        <div class=""></div>
+        <div class="h-[20vh] overflow-y-scroll ">
+          <div id="priceplace" >
+            
+          </div>
+          <div id="totalprice" class="">
+            
+          </div>
+        </div>
 
         <!-- button de confirmer li aydek lpages payment -->
         <div class="absolute bottom-6 w-[calc(100%-2rem)] flex justify-center">
-          <a
-            href="#"
-            class="w-3/4 bg-limoni text-center text-xl p-3.5 rounded-3xl text-white"
-            >Checkout</a
-          >
+          <button id="condirmererPurshach" class=" w-3/4  bg-orange-500 text-center text-xl p-3.5 rounded-3xl text-white  ">Checkout</button>
         </div>
+
       </div>
     </section>
 
