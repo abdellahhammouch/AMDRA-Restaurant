@@ -107,7 +107,7 @@ function afficherDetails() {
                             <button id="increaseContiter" class="px-3 py-1 text-gray-600 hover:text-gray-900">+</button>
                         </div>
                         <div class="">
-                            <button  data-id=${ele.id} id="buttonAdd" type="submit" class="btnAddToCart w-full bg-amber-600 text-center p-1.5 rounded-4xl text-white ">Add to cart</button>
+                            <button  data-id=${ele.id} data-size="small" id="buttonAdd" type="submit" class="btnAddToCart w-full bg-amber-600 text-center p-1.5 rounded-4xl text-white ">Add to cart</button>
                         </div>
                         </div>
                     </div>
@@ -198,7 +198,7 @@ function afficherDetails() {
                             <button class="px-3 py-1 text-gray-600 hover:text-gray-900">+</button>
                         </div>
                         <div class="">
-                            <button data-id=${ele.id} class="btnAddToCart w-full bg-amber-600 text-center p-1.5 rounded-4xl text-white ">Add to cart</button>
+                            <button data-id=${ele.id} data-size="small" class="btnAddToCart w-full bg-amber-600 text-center p-1.5 rounded-4xl text-white ">Add to cart</button>
                         </div>
                         </div>
                     </div>
