@@ -120,7 +120,7 @@ function afficherPlat(Plats) {
         div.setAttribute('class', "oneCard");
         // div.setAttribute('data-id', ele.id);
         // div.cssText="w-60 h-80  shadow-2xl rounded-\[8px\] flex flex-col  items-center justify-evenly";
-        div.setAttribute('class', 'w-60 h-80  rounded-[8px] flex flex-col  items-center justify-evenly shadow-[0px_5px_15px_rgba(0, 0, 0, 0.35)] ');
+        div.setAttribute('class', 'w-60 h-80  rounded-[8px] flex flex-col  items-center justify-evenly shadow mt-5 hover:scale-104 transition delay-150 duration-500 border border-transparent hover:border-[#F59124] py-3');
         // console.log(ele.image);
 
         div.innerHTML = `
