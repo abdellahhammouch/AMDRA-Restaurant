@@ -36,7 +36,7 @@
 
   <body class="">
     <!-- nav bar responsible -->
-    <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+   <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
       <div class="grid grid-cols-[1fr_100px_1fr] items-center">
         <div class="relative pl-2">
           <!--logo burger menu  -->
@@ -60,13 +60,13 @@
             <li
               class="text-gray-700 md:text-limoni border-b-2 md:border-none border-white"
             >
-              <a href="/index.html">Home</a>
+              <a href="./../../index.html">Home</a>
             </li>
             <li
               id=""
               class="text-gray-700 border-b-2 md:border-none border-white"
             >
-              <a href="./src/pages/menu.html">Menu</a>
+              <a href="#">Menu</a>
             </li>
             <li class="text-gray-700 border-b-2 md:border-none border-white">
               <a href="src/pages/contact.html">About/Contact</a>
@@ -82,9 +82,9 @@
           />
         </div>
         <!-- input for recherche -->
-        <div class="flex justify-between lg:justify-evenly items-center">
+        <div class="flex justify-evenly items-center">
           <div
-            class="border border-e-black md:w-auto rounded-3xl flex items-center"
+            class="border border-e-black w-fit rounded-3xl flex items-center"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -101,10 +101,7 @@
               />
             </svg>
 
-            <input
-              type="text"
-              class="shrink w-[90px] sm:w-auto outline-none py-[3px] px-2 h-7 text-sm"
-            />
+            <input type="text" class="outline-none py-[3px] px-2 h-7 text-sm" />
           </div>
 
           <svg
@@ -126,45 +123,42 @@
         </div>
       </div>
     </nav>
+     <!-- hade sections d panier m9da abach tban ta tkmel mn ba3d b js dylha -->
+    <section id="opensection__panierpage" class="fixed top-0 -right-full  h-screen transition-all duration-700 z-50 ">
+      <div class="relative h-screen w-[30vw] bg-gray-100 shadow-2xl p-4 ">
 
-    <!-- hade sections d panier m9da abach tban ta tkmel mn ba3d b js dylha -->
-    <section
-      id="opensection__panierpage"
-      class="fixed top-0 -right-full h-screen transition-all duration-700 z-50"
-    >
-      <div class="relative h-screen w-[30vw] bg-gray-700 p-4">
-        <div class="flex justify-between items-center">
+        <div class="flex justify-between items-center mb-7">
           <h2 class="text-2xl">My order</h2>
-          <svg
-            id="closesection__panierpage"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-8 cursor-pointer pr-2.5"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 18 18 6M6 6l12 12"
-            />
+          <svg id="closesection__panierpage" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 cursor-pointer pr-2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
           </svg>
+
         </div>
 
         <!-- blasaa dyal ga3 les order lakhren ta tgad b js -->
-        <div class=""></div>
+        <div class="h-[60vh] overflow-y-scroll ">
+          <div id="placeofpurchases">
+          
+          </div>
+        </div>
+         
+        
+    
         <!-- lhseab d lpanier kamla ta aydar f js -->
-        <div class=""></div>
+        <div class="h-[20vh] overflow-y-scroll ">
+          <div id="priceplace" >
+            
+          </div>
+          <div id="totalprice" class="">
+            
+          </div>
+        </div>
 
         <!-- button de confirmer li aydek lpages payment -->
         <div class="absolute bottom-6 w-[calc(100%-2rem)] flex justify-center">
-          <a
-            href="#"
-            class="w-3/4 bg-limoni text-center text-xl p-3.5 rounded-3xl text-white"
-            >Checkout</a
-          >
+          <button id="condirmererPurshach" class=" w-3/4  bg-orange-500 text-center text-xl p-3.5 rounded-3xl text-white  ">Checkout</button>
         </div>
+
       </div>
     </section>
 

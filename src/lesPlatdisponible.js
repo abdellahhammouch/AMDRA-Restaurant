@@ -1,4 +1,5 @@
-let sectionCards = document.querySelector(".cards");
+function pagemenu(){
+  let sectionCards = document.querySelector(".cards");
 //les btncategorie
 let btnAll = document.querySelector(".btnAll");
 let MoroccanCategorie = document.querySelector(".MoroccanCategorie");
@@ -195,6 +196,9 @@ function filtrerLesPlats() {
   });
 }
 
+
+
+
 //afficher les plats
 function afficherPlat() {
   let start = (page - 1) * perPage;
@@ -309,6 +313,7 @@ function afficherPlat() {
 
 
 
+}
 
 // afficher panier 
 
@@ -328,6 +333,7 @@ function afiichdatapanier(){
         // let pricepart = document.createElement("div")
         cart.setAttribute("class" , "grid grid-cols-[50px_3fr_1.5fr] bg-white rounded-3xl p-3 gap-2 mb-5")
         cart.innerHTML = `
+        
                 <div class="p-2 flex items-center justify-center">
                     <img src="/src/${ele.image}" alt="logo_plat" class="w-full h-auto rounded-xl">
                 </div>
@@ -426,5 +432,14 @@ function pricepanier(){
 
 
 document.querySelector("#condirmererPurshach").addEventListener("click" , (e) => {
-  
+  location.href = "/src/pages/payment.html"
 })
+
+
+
+if (window.location.pathname.includes("menu.html")) {
+  pagemenu();
+}
+
+
+
