@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Playfair+Display" />
+  <link rel="stylesheet" href="../output.css">
   <title>Confirm Order</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body class="bg-gray-50 font-sans text-gray-800" style="font-family: 'Inter', sans-serif;">
@@ -42,13 +42,7 @@
         </div>
         <div class="text-sm leading-relaxed text-gray-700 border-t pt-6 mt-4">
           <h2 class="font-semibold mb-2" style="color: #737865;">Résumé de votre panier :</h2>
-          <ul class="list-disc list-inside space-y-1" style="color: #737865;">
-            <li>Salade César — 10€</li>
-            <li>Poulet rôti avec pommes de terre sautées - 15€</li>
-            <li>Tarte au citron meringuée - 5€</li>
-            <li>Burger classique avec frites - 12€</li>
-            <li>Soupe de légumes maison — 6€</li>
-          </ul>
+          <ul id="paymentPlaceOrder" class="list-disc list-inside space-y-1" style="color: #737865;"></ul>
           <p class="mt-4 font-semibold text-gray-900">Total : <span id="total">46€</span></p>
         </div>
         <div class="flex items-center gap-4 mt-4">

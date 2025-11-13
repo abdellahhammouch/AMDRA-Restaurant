@@ -1,3 +1,6 @@
+
+let somme = 0 ;
+
 document.getElementById("btnPDF").addEventListener("click", () => {
     const name = document.getElementById('name').value;
     const adresse = document.getElementById('adresse').value;
@@ -37,10 +40,35 @@ document.getElementById("btnPDF").addEventListener("click", () => {
     doc.text(`Téléphone : ${phone}`, 20, 60);
     doc.text(`Adresse : ${adresse}`, 20, 70);
     doc.text(`Email : ${email}`, 20, 80);
-    doc.text(`Total : ${total}`, 20, 90);
+
+    doc.text(`Total : ${somme}$`, 20, 90);
     doc.setFontSize(14);
     doc.setTextColor(0, 150, 0);
     doc.text(`Merci pour votre commande`, 20, 100);
     doc.save("commande.pdf");
+    // localStorage.removeItem("panier")
 });
   
+
+function afficherPagepayment(){
+  let placeorder = document.querySelector("#paymentPlaceOrder")
+  let placetotalprice = document.querySelector("#total")
+  let panier = JSON.parse(localStorage.getItem("panier")) || [];
+  let somme = 0 ;
+
+  panier.forEach((element) => {
+    let li = document.createElement("li")
+    li.innerHTML = `
+      ${element.name} - ${element.quantity * element.price} 
+    `
+    somme += element.quantity * element.price;
+    placeorder.append(li)
+    
+  });
+
+  placetotalprice.textContent = somme + "$"
+}
+
+afficherPagepayment();
+
+console.log(somme);

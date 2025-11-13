@@ -322,6 +322,7 @@ function afiichdatapanier(){
         // let pricepart = document.createElement("div")
         cart.setAttribute("class" , "grid grid-cols-[50px_3fr_1.5fr] bg-white rounded-3xl p-3 gap-2 mb-5")
         cart.innerHTML = `
+        
                 <div class="p-2 flex items-center justify-center">
                     <img src="/src/${ele.image}" alt="logo_plat" class="w-full h-auto rounded-xl">
                 </div>
@@ -421,5 +422,6 @@ function pricepanier(){
 
 
 document.querySelector("#condirmererPurshach").addEventListener("click" , (e) => {
-  
+  location.href = "/src/pages/payment.html"
 })
+
