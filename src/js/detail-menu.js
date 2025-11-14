@@ -63,11 +63,11 @@ function afficherDetails() {
                     <div class="md:w-1/2  ">
     
                     <div class="">
-                        <h3 class="text-7xl text-black font-bold mb-2">${ele.name}</h3>
+                        <h3 class="text-7xl text-black finger-font font-bold mb-2">${ele.name}</h3>
                         <p class="text-orange-500 text-xl pb-3 pl-1 border-b border-gray-300">${ele.price}$</p>
                     </div>
     
-                    <div class="pl-1 border-b border-gray-300 ">
+                    <div class="pl-1 border-b afacad-font border-gray-300 ">
                         <p class="text-2xl p-1.5 ">${ele.description}.</p>
                     </div>
     
@@ -160,11 +160,11 @@ function afficherDetails() {
                     <div class="md:w-1/2  ">
     
                     <div class="">
-                        <h3 class="text-7xl text-black font-bold mb-2">${ele.name}</h3>
+                        <h3 class="text-7xl text-black font-bold finger-font mb-2">${ele.name}</h3>
                         <p class="text-orange-500 text-xl pb-3 pl-1 border-b border-gray-300">${ele.price}$</p>
                     </div>
     
-                    <div class="pl-1 border-b border-gray-300 ">
+                    <div class="pl-1 border-b afacad-font border-gray-300 ">
                         <p class="text-2xl p-1.5 ">${ele.description}.</p>
                     </div>
     

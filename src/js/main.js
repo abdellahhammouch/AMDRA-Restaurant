@@ -94,7 +94,8 @@ function printHeroSection() {
           "border-2",
           "border-limoni",
           "bg-transparent",
-          "text-black"
+          // "text-black"
+          "text-white"
         );
 
         b.classList.add("bg-blue-600", "text-white");
