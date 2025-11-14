@@ -69,7 +69,7 @@ function printHeroSection() {
 
     // select first button and show it's image
     if (i === 0) {
-      btn.classList.remove("bg-blue-600", "text-white");
+      btn.classList.remove("bg-limoni", "text-white");
       btn.classList.add(
         "border-2",
         "border-limoni",
@@ -98,11 +98,11 @@ function printHeroSection() {
           "text-white"
         );
 
-        b.classList.add("bg-blue-600", "text-white");
+        b.classList.add("bg-limoni", "text-white");
       });
 
       // Apply active style
-      clickedButton.target.classList.remove("bg-blue-600", "text-white");
+      clickedButton.target.classList.remove("bg-limoni", "text-white");
       clickedButton.target.classList.add(
         "border-2",
         "border-limoni",

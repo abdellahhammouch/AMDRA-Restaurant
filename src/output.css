@@ -14,7 +14,6 @@
     --color-orange-500: oklch(70.5% 0.213 47.604);
     --color-orange-600: oklch(64.6% 0.222 41.116);
     --color-amber-600: oklch(66.6% 0.179 58.318);
-    --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-pink-100: oklch(94.8% 0.028 342.258);
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-100: oklch(96.7% 0.003 264.542);
@@ -224,9 +223,6 @@
   .relative {
     position: relative;
   }
-  .sticky {
-    position: sticky;
-  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -235,9 +231,6 @@
   }
   .top-10 {
     top: calc(var(--spacing) * 10);
-  }
-  .top-15 {
-    top: calc(var(--spacing) * 15);
   }
   .-right-full {
     right: -100%;
@@ -259,9 +252,6 @@
   }
   .z-50 {
     z-index: 50;
-  }
-  .z-100 {
-    z-index: 100;
   }
   .mx-auto {
     margin-inline: auto;
@@ -289,9 +279,6 @@
   }
   .my-16 {
     margin-block: calc(var(--spacing) * 16);
-  }
-  .-mt-354 {
-    margin-top: calc(var(--spacing) * -354);
   }
   .mt-2\.5 {
     margin-top: calc(var(--spacing) * 2.5);
@@ -482,8 +469,8 @@
   .w-32 {
     width: calc(var(--spacing) * 32);
   }
-  .w-40 {
-    width: calc(var(--spacing) * 40);
+  .w-41 {
+    width: calc(var(--spacing) * 41);
   }
   .w-44 {
     width: calc(var(--spacing) * 44);
@@ -780,9 +767,6 @@
   }
   .bg-black {
     background-color: var(--color-black);
-  }
-  .bg-blue-600 {
-    background-color: var(--color-blue-600);
   }
   .bg-ghoz {
     background-color: var(--color-ghoz);
@@ -1171,11 +1155,6 @@
       margin-inline: auto;
     }
   }
-  .sm\:-mt-390 {
-    @media (width >= 40rem) {
-      margin-top: calc(var(--spacing) * -390);
-    }
-  }
   .sm\:w-10\/12 {
     @media (width >= 40rem) {
       width: calc(10/12 * 100%);
@@ -1235,11 +1214,6 @@
   .md\:mx-0 {
     @media (width >= 48rem) {
       margin-inline: calc(var(--spacing) * 0);
-    }
-  }
-  .md\:-mt-350 {
-    @media (width >= 48rem) {
-      margin-top: calc(var(--spacing) * -350);
     }
   }
   .md\:block {
@@ -1340,11 +1314,6 @@
       color: var(--color-gray-700);
     }
   }
-  .md\:text-limoni {
-    @media (width >= 48rem) {
-      color: var(--color-limoni);
-    }
-  }
   .md\:text-orange-500 {
     @media (width >= 48rem) {
       color: var(--color-orange-500);
@@ -1359,11 +1328,6 @@
   .lg\:mx-0 {
     @media (width >= 64rem) {
       margin-inline: calc(var(--spacing) * 0);
-    }
-  }
-  .lg\:-mt-213 {
-    @media (width >= 64rem) {
-      margin-top: calc(var(--spacing) * -213);
     }
   }
   .lg\:w-9\/12 {
