@@ -37,7 +37,7 @@ function printHeroSection() {
     const img = document.createElement("img");
     img.setAttribute("data-index", i);
     img.src = image.url;
-    img.style.transform = "translateX(200%)";
+    img.style.transform = "translateX(700%)";
     slider.append(img);
   });
 
@@ -118,12 +118,12 @@ function printHeroSection() {
       );
 
       newImage.style.transition = "none";
-      newImage.style.transform = "translateX(200%)";
+      newImage.style.transform = "translateX(700%)";
       newImage.offsetWidth;
 
       previousImage.style.cssText = `
         transition: transform 1s;
-        transform: translateX(-200%);
+        transform: translateX(-700%);
         `;
       newImage.style.cssText = `
         transition: transform 1s;

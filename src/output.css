@@ -483,9 +483,6 @@
   .max-w-\[400px\] {
     max-width: 400px;
   }
-  .shrink {
-    flex-shrink: 1;
-  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
@@ -1081,11 +1078,6 @@
       width: 150px;
     }
   }
-  .sm\:w-auto {
-    @media (width >= 40rem) {
-      width: auto;
-    }
-  }
   .sm\:grid-cols-1 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -1198,11 +1190,6 @@
       text-align: start;
     }
   }
-  .md\:text-gray-700 {
-    @media (width >= 48rem) {
-      color: var(--color-gray-700);
-    }
-  }
   .md\:text-limoni {
     @media (width >= 48rem) {
       color: var(--color-limoni);
@@ -1244,11 +1231,6 @@
       grid-template-rows: repeat(2, minmax(0, 1fr));
     }
   }
-  .lg\:justify-evenly {
-    @media (width >= 64rem) {
-      justify-content: space-evenly;
-    }
-  }
   .lg\:text-center {
     @media (width >= 64rem) {
       text-align: center;
@@ -1275,6 +1257,9 @@
 }
 .inter-font {
   font-family: 'Inter';
+}
+body {
+  overflow: hidden;
 }
 .ourFood h2 {
   font-family: 'Finger Paint';
