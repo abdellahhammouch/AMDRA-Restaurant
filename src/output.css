@@ -444,6 +444,9 @@
   .w-\[30vw\] {
     width: 30vw;
   }
+  .w-\[60vw\] {
+    width: 60vw;
+  }
   .w-\[80\%\] {
     width: 80%;
   }
@@ -462,8 +465,8 @@
   .w-\[calc\(100\%-2rem\)\] {
     width: calc(100% - 2rem);
   }
-  .w-fit {
-    width: fit-content;
+  .w-auto {
+    width: auto;
   }
   .w-full {
     width: 100%;
@@ -510,8 +513,8 @@
   .grid-cols-\[1fr_100px_1fr\] {
     grid-template-columns: 1fr 100px 1fr;
   }
-  .grid-cols-\[50px_3fr_1\.5fr\] {
-    grid-template-columns: 50px 3fr 1.5fr;
+  .grid-cols-\[80px_auto_1fr\] {
+    grid-template-columns: 80px auto 1fr;
   }
   .grid-cols-\[auto_1fr\] {
     grid-template-columns: auto 1fr;
@@ -602,6 +605,9 @@
   .self-start {
     align-self: flex-start;
   }
+  .justify-self-end {
+    justify-self: flex-end;
+  }
   .overflow-hidden {
     overflow: hidden;
   }
@@ -682,9 +688,6 @@
   }
   .border-white {
     border-color: var(--color-white);
-  }
-  .border-e-black {
-    border-inline-end-color: var(--color-black);
   }
   .bg-\[\#5C5C5C\] {
     background-color: #5C5C5C;
@@ -806,9 +809,6 @@
   .py-32 {
     padding-block: calc(var(--spacing) * 32);
   }
-  .py-\[3px\] {
-    padding-block: 3px;
-  }
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
   }
@@ -838,9 +838,6 @@
   }
   .pl-1 {
     padding-left: calc(var(--spacing) * 1);
-  }
-  .pl-1\.5 {
-    padding-left: calc(var(--spacing) * 1.5);
   }
   .pl-2 {
     padding-left: calc(var(--spacing) * 2);
@@ -876,10 +873,6 @@
   .text-base {
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
-  }
-  .text-lg {
-    font-size: var(--text-lg);
-    line-height: var(--tw-leading, var(--text-lg--line-height));
   }
   .text-sm {
     font-size: var(--text-sm);
@@ -1088,6 +1081,16 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
+  .sm\:flex-row {
+    @media (width >= 40rem) {
+      flex-direction: row;
+    }
+  }
+  .sm\:justify-between {
+    @media (width >= 40rem) {
+      justify-content: space-between;
+    }
+  }
   .sm\:justify-end {
     @media (width >= 40rem) {
       justify-content: flex-end;
@@ -1112,6 +1115,12 @@
     @media (width >= 40rem) {
       font-size: var(--text-5xl);
       line-height: var(--tw-leading, var(--text-5xl--line-height));
+    }
+  }
+  .sm\:text-xl {
+    @media (width >= 40rem) {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
   .md\:static {
@@ -1139,6 +1148,11 @@
       display: none;
     }
   }
+  .md\:h-7 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 7);
+    }
+  }
   .md\:w-1\/2 {
     @media (width >= 48rem) {
       width: calc(1/2 * 100%);
@@ -1147,6 +1161,11 @@
   .md\:w-9\/12 {
     @media (width >= 48rem) {
       width: calc(9/12 * 100%);
+    }
+  }
+  .md\:w-\[45vw\] {
+    @media (width >= 48rem) {
+      width: 45vw;
     }
   }
   .md\:w-\[80\%\] {
@@ -1169,6 +1188,11 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
+  .md\:grid-cols-\[80px_3fr_1\.5fr\] {
+    @media (width >= 48rem) {
+      grid-template-columns: 80px 3fr 1.5fr;
+    }
+  }
   .md\:flex-row {
     @media (width >= 48rem) {
       flex-direction: row;
@@ -1188,6 +1212,23 @@
   .md\:text-start {
     @media (width >= 48rem) {
       text-align: start;
+    }
+  }
+  .md\:text-lg {
+    @media (width >= 48rem) {
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
+  }
+  .md\:text-xs {
+    @media (width >= 48rem) {
+      font-size: var(--text-xs);
+      line-height: var(--tw-leading, var(--text-xs--line-height));
+    }
+  }
+  .md\:text-gray-700 {
+    @media (width >= 48rem) {
+      color: var(--color-gray-700);
     }
   }
   .md\:text-limoni {
@@ -1258,7 +1299,7 @@
 .inter-font {
   font-family: 'Inter';
 }
-body {
+.hero {
   overflow: hidden;
 }
 .ourFood h2 {

@@ -30,18 +30,18 @@
             class="hidden md:flex justify-evenly absolute md:static flex-col md:flex-row bg-black md:bg-transparent left-0 top-10 md:w-auto shadow-md md:shadow-none ml-2"
           >
             <li
-              class="text-gray-700 md:text-limoni border-b-2 md:border-none border-white"
+              class="text-white md:text-limoni border-b-2 md:border-none border-white"
             >
-              <a href="./../../index.html">Home</a>
+              <a href="/index.html">Home</a>
             </li>
             <li
               id=""
-              class="text-gray-700 border-b-2 md:border-none border-white"
+              class="text-white md:text-gray-700 border-b-2 md:border-none border-white"
             >
-              <a href="#">Menu</a>
+              <a href="/src/pages/menu.html">Menu</a>
             </li>
-            <li class="text-gray-700 border-b-2 md:border-none border-white">
-              <a href="src/pages/contact.html">About/Contact</a>
+            <li class="text-white md:text-gray-700 border-b-2 md:border-none border-white">
+              <a href="#">About/Contact</a>
             </li>
           </ul>
         </div>
@@ -53,29 +53,7 @@
             class="h-20"
           />
         </div>
-        <!-- input for recherche -->
-        <div class="flex justify-evenly items-center">
-          <div
-            class="border border-e-black w-fit rounded-3xl flex items-center"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6 pl-1.5"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-              />
-            </svg>
-
-            <input type="text" class="outline-none py-[3px] px-2 h-7 text-sm" />
-          </div>
-
+        <div class="justify-self-end p-5">
           <svg
             id="navpanier__logo"
             xmlns="http://www.w3.org/2000/svg"
@@ -85,20 +63,21 @@
             stroke-width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="size-6 cursor-pointer"
+            class="size-6 cursor-pointer "
           >
             <path
               d="M6 7h12a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1Z"
             />
             <path d="M9 7V6a3 3 0 0 1 6 0v1" />
           </svg>
+          </div>
         </div>
       </div>
     </nav>
 
-      <!-- hade sections d panier m9da abach tban ta tkmel mn ba3d b js dylha -->
-    <section id="opensection__panierpage" class="fixed top-0 -right-full  h-screen transition-all duration-700 z-50 ">
-      <div class="relative h-screen w-[30vw] bg-gray-100 shadow-2xl p-4 ">
+    <!-- hade sections d panier m9da abach tban ta tkmel mn ba3d b js dylha -->
+   <section id="opensection__panierpage" class="fixed top-0 -right-full  h-screen transition-all duration-700 z-50 ">
+      <div class="relative h-screen w-[60vw] md:w-[45vw] bg-gray-100 shadow-2xl p-4 ">
 
         <div class="flex justify-between items-center mb-7">
           <h2 class="text-2xl">My order</h2>
@@ -217,6 +196,6 @@
 
     </section>
 
-    
+<script src="/script.js"></script>
 </body>
 </html>
