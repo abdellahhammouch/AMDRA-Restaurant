@@ -1,4 +1,5 @@
-const panier = JSON.parse(localStorage.getItem("panier")) || [];
+// const panier = JSON.parse(localStorage.getItem("panier")) || [];
+const panier = homepanier;
 let quantity = 1;
 
 fetch("/src/Plats.json")
@@ -124,7 +125,7 @@ function afficherDetails() {
         const detailsele = document.createElement("section");
         let appn = document.querySelector("nav");
         detailsele.setAttribute("class", "mt-28");
-        detailsele.innerHTML = `
+        detailsele.innerHTML = ` 
                 <div class="w-[95%] md:w-[80%] mx-auto flex flex-col md:flex-row gap-7 bg-orange-50 rounded-3xl p-5">
     
                   <div class="w-full md:w-1/2 ">
@@ -166,6 +167,7 @@ function afficherDetails() {
                     <div class="pl-1 border-b border-gray-300 ">
                         <p class="text-2xl p-1.5 ">${ele.description}.</p>
                     </div>
+    
                     <div class="flex gap-3 items-center  pl-1 border-b border-gray-300 ">
                         <p class="font-bold">ingredients</p>
                         <div class="size-12 grid items-center">
@@ -178,6 +180,7 @@ function afficherDetails() {
                         <img src="../${ele.ingredients[2].image}" alt="" class="w-10/12 rounded border">
                         </div>
                     </div>
+    
                     <div class="py-2  flex justify-between items-center">
                         <span class="font-bold py-2">Size</span>
                         <div class="flex w-1/2 justify-end gap-2 sizesPlat">
@@ -186,19 +189,23 @@ function afficherDetails() {
                     <div data-id="${ele.id}"  data-size="large" class="cursor-pointer size L bg-white text-black w-7 h-7 text-center rounded-[5px] border largSize">L</div>
                 </div>
                     </div>
+    
                     <div class="">
+    
                         <div class="flex justify-between border-b border-gray-300">
                         <span class="font-bold ">Total Price</span>
-                        <span class="font-semibold">200 DH</span>
+                        <span class="font-semibold">${ele.price}$</span>
                         </div>
+    
                         <div class="md:grid grid-cols-[auto_1fr] gap-2 mt-2.5">
+    
                         <div class="flex justify-between items-center border-2 border-gray-200 rounded-4xl">
-                            <button class="px-3 py-1 text-gray-600 hover:text-gray-900 ">-</button>
-                            <span class="px-3 py-1 font-semibold">${quantity}</span>
-                            <button class="px-3 py-1 text-gray-600 hover:text-gray-900">+</button>
+                            <button id="decreaseContiter" class="px-3 py-1 text-gray-600 hover:text-gray-900 ">-</button>
+                            <span id="cantiterOrder" class="px-3 py-1 font-semibold">${quantity}</span>
+                            <button id="increaseContiter" class="px-3 py-1 text-gray-600 hover:text-gray-900">+</button>
                         </div>
                         <div class="">
-                            <button data-id=${ele.id} data-size="small" class="btnAddToCart w-full bg-amber-600 text-center p-1.5 rounded-4xl text-white ">Add to cart</button>
+                            <button  data-id=${ele.id} data-size="small" id="buttonAdd" type="submit" class="btnAddToCart w-full bg-amber-600 text-center p-1.5 rounded-4xl text-white ">Add to cart</button>
                         </div>
                         </div>
                     </div>
@@ -265,6 +272,7 @@ function afficherDetails() {
     }
 
     localStorage.setItem("panier", JSON.stringify(panier));
+    afiichdatapanier();
     alert("Plat ajouter au panier");
   });
 

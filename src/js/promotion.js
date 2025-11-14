@@ -13,7 +13,7 @@ const fetchPromotions = () =>
                     <div class="card-image">
                       <img class="w-[200px]" src="../${item.image}"/></div>
                     <div class="card-content">
-                        <h3>${item.name}</h3>
+                        <h3 class="pourDetails cursor-pointer" data-id="${item.id}" data-categhorie="dishes" >${item.name}</h3>
                         <p>${item.price} DH</p>
                     </div>
         `;
