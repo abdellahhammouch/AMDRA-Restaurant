@@ -407,3 +407,112 @@ body {
 
 /* ---------------section Pizza------------------
 -------------------------------------------------*/
+.shadow {
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+
+.chefs {
+  border: 1px solid black;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+.mapContainer{
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+/*-----------------------------Desktop----------------------------*/
+
+@media (min-width: 1100px) {
+  .chefsContainer {
+    display: flex;
+  }
+  .sousChefs {
+    width: 13rem;
+    height: 19rem;
+    margin-top: 6%;
+  }
+  .imageChefContainer {
+    margin-bottom: 20px;
+  }
+  .chef {
+    z-index: 10;
+  }
+  .doae{
+    left: 6.5%;
+  }
+  .amine{
+    left: 4%;
+  }
+  .maria{
+    right: 4%;
+    z-index: 2;
+  }
+  .reda{
+    right: 6.5%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .formulaireContainer{
+    width: 85%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr;
+  }
+
+  .formConatiner{
+    grid-row: 1 / 2;
+    grid-column: 2 / 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr  1fr;
+  }
+
+  .submitButton{
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    justify-self: end;
+    padding-right: 4%;
+  }
+
+  .contacterNous{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    text-align: start;
+    width: 100%;
+  }
+
+  .pContainer{
+    justify-items: start;
+  }
+
+  .contactQuestionNous, .questionContact {
+    text-align: start;
+  }
+
+  .informationContainer{
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+  }
+
+
+  .fanMapContainer{
+    display: flex;
+  }
+
+  .mapContainer{
+    bottom: 0;
+    width: 40%;
+    height: 280px;
+    align-self: center;
+  }
+
+  .faqContainer{
+    width: 60%;
+  }
+}

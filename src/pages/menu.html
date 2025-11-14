@@ -324,8 +324,9 @@
       <button class="carousel-btn next" id="nextBtn">›</button>
     </section>
 
-    <h2 class="inter-font font-bold text-xl">Standout Dishes From Our Menu</h2>
-    <div class="serachAndFillter flex justify-around items-center">
+    <h2 class="inter-font font-bold text-xl w-40 ml-35 my-6">Standout Dishes From Our Menu</h2>
+    <div class="serachAndFillter flex justify-around  items-center">
+
       <div class="inputSearch relative">
         <input
           type="text"
@@ -338,6 +339,7 @@
           alt="this icon for search"
         />
       </div>
+      
       <div class="btnFilter w-1/3 flex justify-between">
         <button class="btnAll bg-black text-white w-22 h-7 rounded-[10px]">
           All
@@ -352,6 +354,19 @@
           Mexican
         </button>
       </div>
+
+
+ <div class="btnFilter w-1/3 flex justify-evenly  h-7 rounded-[10px] md:hidden">
+            <select name="" id="" class="categorieSelect w-45 border rounded-xl">
+                <option class="" value="All">All</option>
+                <option class="" value="Moroccan">Moroccan</option>
+                <option class="" value="Italian">Italian</option>
+                <option class="" value="Mexican">Mexican</option>
+            </select>
+        </div>
+
+
+
     </div>
 
     <section
