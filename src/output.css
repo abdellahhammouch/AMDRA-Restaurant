@@ -260,6 +260,9 @@
   .z-50 {
     z-index: 50;
   }
+  .z-100 {
+    z-index: 100;
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -412,9 +415,6 @@
   }
   .h-95 {
     height: calc(var(--spacing) * 95);
-  }
-  .h-2000 {
-    height: calc(var(--spacing) * 2000);
   }
   .h-\[20vh\] {
     height: 20vh;
@@ -1335,6 +1335,11 @@
   .md\:text-limoni {
     @media (width >= 48rem) {
       color: var(--color-limoni);
+    }
+  }
+  .md\:text-orange-500 {
+    @media (width >= 48rem) {
+      color: var(--color-orange-500);
     }
   }
   .md\:shadow-none {
