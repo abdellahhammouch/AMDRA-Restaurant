@@ -536,6 +536,9 @@
   .w-\[350px\] {
     width: 350px;
   }
+  .w-\[375px\] {
+    width: 375px;
+  }
   .w-\[calc\(100\%-2rem\)\] {
     width: calc(100% - 2rem);
   }
@@ -1237,6 +1240,11 @@
   .md\:-mt-350 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * -350);
+    }
+  }
+  .md\:block {
+    @media (width >= 48rem) {
+      display: block;
     }
   }
   .md\:flex {

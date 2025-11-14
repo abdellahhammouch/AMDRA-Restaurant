@@ -30,13 +30,16 @@ document.querySelector(".left-pagination").addEventListener("click", (e) => {
 });
 
 document.querySelector(".right-pagination").addEventListener("click", (e) => {
+
   count = filteredCartItems.length;
+
   if (page == Math.ceil(count / perPage)) {
     alert("you are in the end of right pagination");
   } else {
     page++;
     afficherPlat();
   }
+  
 });
 
 try {
@@ -73,32 +76,35 @@ function filtrerLesPlats() {
       fetch("../Plats.json")
         .then((resp) => resp.json())
         .then((data) => {
-          // console.log(data);
-          const MorocanPlat = data.dishes.filter(
+          filteredCartItems = data.dishes.filter(
             (ele) => ele.category === "Moroccan"
           );
-          // console.log(MorocanPlat);
-          afficherPlat(MorocanPlat);
+          page = 1;
+          afficherPlat();
         });
     }
     if (categorieSelect.value === "Mexican") {
       fetch("../Plats.json")
         .then((resp) => resp.json())
         .then((data) => {
-          const MexicanPlat = data.dishes.filter(
+          filteredCartItems = data.dishes.filter(
             (ele) => ele.category === "Mexican"
           );
-          afficherPlat(MexicanPlat);
+          page = 1;
+
+          afficherPlat();
         });
     }
     if (categorieSelect.value === "Italian") {
       fetch("../Plats.json")
         .then((resp) => resp.json())
         .then((data) => {
-          const ItalianPlat = data.dishes.filter(
+          filteredCartItems = data.dishes.filter(
             (ele) => ele.category === "Italian"
           );
-          afficherPlat(ItalianPlat);
+          page = 1;
+
+          afficherPlat();
         });
     }
   });
@@ -241,9 +247,11 @@ function filtrerLesPlats() {
 //afficher les plats
 function afficherPlat() {
   let start = (page - 1) * perPage;
+
   sectionCards.innerHTML = "";
 
   for (let i = start; i < start + perPage; i++) {
+
     if (i >= filteredCartItems.length) {
       break;
     }
