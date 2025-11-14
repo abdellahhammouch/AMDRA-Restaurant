@@ -1,0 +1,319 @@
+{
+  "promotions": [
+     {
+      "id": 1,
+      "name": "Tagine d'Agneau",
+      "category": "Moroccan",
+      "description": "Tagine d'agneau mijoté avec des prunes, épices douces et amandes grillées.",
+      "price": 85.50,
+      "image": "images/plats/Tagine-d'Agneau-aux-Prunes.svg",
+      "ingredients": [
+        { "name": "Agneau", "image": "images/ingredient/Agneau.png" },
+        { "name": "Prunes", "image": "images/ingredient/Prunes.png" },
+        { "name": "Amandes", "image": "images/ingredient/Amandes.png" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Couscous Royal",
+      "category": "Moroccan",
+      "description": "Couscous traditionnel servi avec un assortiment de viande, légumes et pois chiches.",
+      "price": 70.00,
+      "image": "images/plats/Couscous Royal.svg",
+      "ingredients": [
+        { "name": "Semoule", "image": "images/ingredient/Semoule.png" },
+        { "name": "Poulet", "image": "images/ingredient/Poulet.png" },
+        { "name": "Pois chiches", "image": "images/ingredient/Pois chiches.png" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Pastilla au Poulet",
+      "category": "Moroccan",
+      "description": "Tourte croustillante sucrée-salée au poulet, amandes et cannelle.",
+      "price": 62.00,
+      "image":"images/plats/Pastilla-au-Poulet.svg",
+      "ingredients": [
+        { "name": "Poulet", "image": "images/ingredient/Poulet.png" },
+        { "name": "Amandes", "image": "images/ingredient/Amandes.png" },
+        { "name": "Feuilles de brick", "image": "images/ingredient/Feuilles de brick.png" }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Pizza Margherita",
+      "category": "Italian",
+      "description": "Classique pizza italienne avec tomate, mozzarella et basilic.",
+      "price": 45.00,
+      "image": "images/plats/Pizza-Margherita.svg",
+      "ingredients": [
+        { "name": "Tomate", "image": "images/ingredient/Tomate.png" },
+        { "name": "Mozzarella", "image": "images/ingredient/Mozzarella.png" },
+        { "name": "Basilic", "image": "images/ingredient/Basilic.png" }
+      ]
+    }
+  ],
+  "dishes": [
+    {
+      "id": 1,
+      "name": "Tagine d'Agneau",
+      "category": "Moroccan",
+      "description": "Tagine d'agneau mijoté avec des prunes, épices douces et amandes grillées.",
+      "price": 85.50,
+      "image": "images/plats/Tagine-d'Agneau-aux-Prunes.svg",
+      "ingredients": [
+        { "name": "Agneau", "image": "images/ingredient/Agneau.png" },
+        { "name": "Prunes", "image": "images/ingredient/Prunes.png" },
+        { "name": "Amandes", "image": "images/ingredient/Amandes.png" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Couscous Royal",
+      "category": "Moroccan",
+      "description": "Couscous traditionnel servi avec un assortiment de viande, légumes et pois chiches.",
+      "price": 70.00,
+      "image": "images/plats/Couscous Royal.svg",
+      "ingredients": [
+        { "name": "Semoule", "image": "images/ingredient/Semoule.png" },
+        { "name": "Poulet", "image": "images/ingredient/Poulet.png" },
+        { "name": "Pois chiches", "image": "images/ingredient/Pois chiches.png" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Pastilla au Poulet",
+      "category": "Moroccan",
+      "description": "Tourte croustillante sucrée-salée au poulet, amandes et cannelle.",
+      "price": 62.00,
+      "image":"images/plats/Pastilla-au-Poulet.svg",
+      "ingredients": [
+        { "name": "Poulet", "image": "images/ingredient/Poulet.png" },
+        { "name": "Amandes", "image": "images/ingredient/Amandes.png" },
+        { "name": "Feuilles de brick", "image": "images/ingredient/Feuilles de brick.png" }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Pizza Margherita",
+      "category": "Italian",
+      "description": "Classique pizza italienne avec tomate, mozzarella et basilic.",
+      "price": 45.00,
+      "image": "images/plats/Pizza-Margherita.svg",
+      "ingredients": [
+        { "name": "Tomate", "image": "images/ingredient/Tomate.png" },
+        { "name": "Mozzarella", "image": "images/ingredient/Mozzarella.png" },
+        { "name": "Basilic", "image": "images/ingredient/Basilic.png" }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Spaghetti Carbonara",
+      "category": "Italian",
+      "description": "Spaghetti crémeux aux œufs, pecorino et pancetta.",
+      "price": 50.00,
+      "image": "images/plats/SpaghettiCarbonara.svg",
+      "ingredients": [
+        { "name": "Spaghetti", "image": "images/ingredient/Spaghetti.png" },
+        { "name": "Pancetta", "image": "images/ingredient/Pancetta.png" },
+        { "name": "Pecorino", "image": "images/ingredient/Pecorino.png" }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Tacos al Pastor",
+      "category": "Mexican",
+      "description": "Tacos au porc mariné, ananas grillé et coriandre.",
+      "price": 35.00,
+      "image": "images/plats/Tacos-al-Pastor.svg",
+      "ingredients": [
+        { "name": "Porc mariné", "image": "images/ingredient/Porc mariné.png" },
+        { "name": "Ananas", "image": "images/ingredient/Ananas.png" },
+        { "name": "Tortilla", "image": "images/ingredient/Tortilla.png" }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Sushi Assortiment",
+      "category": "Mexican",
+      "description": "Plateau varié de nigiri, maki et sashimi frais.",
+      "price": 120.00,
+      "image": "images/plats/Sushi-Assortimen.svg",
+      "ingredients": [
+        { "name": "Saumon", "image": "images/ingredient/Saumon.png" },
+        { "name": "Riz vinaigré", "image": "images/ingredient/Riz vinaigré.png" },
+        { "name": "Algue Nori", "image": "images/ingredient/Algue Nori.png" }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Pad Thai",
+      "category": "Mexican",
+      "description": "Nouilles sautées au tamarin, crevettes, cacahuètes et pousses de soja.",
+      "price": 48.00,
+      "image": "images/plats/Pad-Thai.svg",
+      "ingredients": [
+        { "name": "Nouilles de riz", "image": "images/ingredient/Nouilles de riz.png" },
+        { "name": "Crevettes", "image": "images/ingredient/Crevettes.png" },
+        { "name": "Cacahuètes", "image": "images/ingredient/Cacahuètes.png" }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Burger Gourmet",
+      "category": "Mexican",
+      "description": "Burger maison avec steak haché, cheddar, oignons caramélisés et sauce spéciale.",
+      "price": 55.00,
+      "image": "images/plats/Burger Gourmet.svg",
+      "ingredients": [
+        { "name": "Boeuf haché", "image": "images/ingredient/Bœuf haché.png" },
+        { "name": "Cheddar", "image": "images/ingredient/Cheddar.png" },
+        { "name": "Pain brioché", "image": "images/ingredient/Pain brioché.png" }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Salade Niçoise",
+      "category": "Italian",
+      "description": "Salade classique avec thon, oeufs, olives, haricots verts et pommes de terre.",
+      "price": 38.00,
+      "image": "images/plats/Salade Niçoise.svg",
+      "ingredients": [
+        { "name": "Thon", "image": "images/ingredient/Thon.png" },
+        { "name": "Oeufs", "image": "images/ingredient/oeufs.png" },
+        { "name": "Olives", "image": "images/ingredient/Olives.png" }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Shakshuka",
+      "category": "Moroccan",
+      "description": "Oeufs pochés dans une sauce tomate aux poivrons et épices.",
+      "price": 30.00,
+      "image": "images/plats/Shakshuka.svg",
+      "ingredients": [
+        { "name": "Oeufs", "image": "images/ingredient/oeufs.png" },
+        { "name": "Tomates", "image": "images/ingredient/Tomate.png" },
+        { "name": "Poivrons", "image": "images/ingredient/Poivrons.pngg" }
+      ]
+    },
+   
+    {
+      "id": 12,
+      "name": "Falafel Wrap",
+      "category": "Mexican",
+      "description": "Wrap croustillant garnis de falafels, crudités et sauce tahini.",
+      "price": 28.00,
+      "image": "images/plats/Falafel Wrap.svg",
+      "ingredients": [
+        { "name": "Pois chiches", "image": "images/ingredient/Pois chiches.pn" },
+        { "name": "Persil", "image": "images/ingredient/Persil.png" },
+        { "name": "Pain pita", "image": "images/ingredient/Pain pita.png" }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Ceviche de Poisson",
+      "category": "Moroccan",
+      "description": "Poisson mariné au citron vert, piment et coriandre, servi frais.",
+      "price": 65.00,
+      "image": "images/plats/Ceviche de Poisson.svg",
+      "ingredients": [
+        { "name": "Poisson blanc", "image": "images/ingredient/Poisson blanc.png" },
+        { "name": "Citron vert", "image": "images/ingredient/Citron vert.png" },
+        { "name": "Coriandre", "image": "images/ingredient/Coriandre.png" }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Bibimbap",
+      "category": "Moroccan",
+      "description": "Bol coréen avec riz, légumes sautés, béchamel de piment et oeuf.",
+      "price": 52.50,
+      "image": "images/plats/Bibimbap.svg",
+      "ingredients": [
+        { "name": "Riz", "image": "images/ingredient/Riz vinaigré.png" },
+        { "name": "Kimchi", "image": "images/ingredient/Kimchi.png"},
+        { "name": "Oeuf", "image": "images/ingredient/oeufs.png" }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Gnocchi au Pesto",
+      "category": "Italian",
+      "description": "Gnocchi de pomme de terre servis avec une sauce pesto maison.",
+      "price": 46.00,
+      "image": "images/plats/Gnocchi au Pesto.svg",
+      "ingredients": [
+        { "name": "Gnocchi", "image": "images/ingredient/Gnocchi.png" },
+        { "name": "Basilic", "image": "images/ingredient/Basilic.png" },
+        { "name": "Pignons", "image": "images/ingredient/Pignons.png" }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Steak Frites",
+      "category": "Mexican",
+      "description": "Entrecôte grillée servie avec frites croustillantes et beurre maître d'hotel.",
+      "price": 95.00,
+      "image": "images/plats/Steak Frites.svg",
+      "ingredients": [
+        { "name": "Entrecôte", "image": "images/ingredient/Entrecôte.png" },
+        { "name": "Pommes de terre", "image": "images/ingredient/Pommes de terre.png" },
+        { "name": "Beurre", "image": "images/ingredient/Beurre.png" }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Curry Vert au Poulet",
+      "category": "Thai",
+      "description": "Curry vert parfumé au lait de coco, piments verts et basilic thaï.",
+      "price": 49.50,
+      "image": "images/plats/Curry Vert au Poulet.svg",
+      "ingredients": [
+        { "name": "Poulet", "image": "images/ingredient/Poulet.png" },
+        { "name": "Lait de coco", "image": "images/ingredient/Lait de coco.png" },
+        { "name": "Piment vert", "image": "images/ingredient/Piment vert.png" }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Crêpes Suzette",
+      "category": "Italian",
+      "description": "Crêpes fines flambées à l'orange et au curaçao, servies chaudes.",
+      "price": 28.50,
+      "image": "images/plats/Crêpes Suzette.svg",
+      "ingredients": [
+        { "name": "Farine", "image": "images/ingredient/Farine.png" },
+        { "name": "Orange", "image": "images/ingredient/Orange.png" },
+        { "name": "Beurre", "image": "images/ingredient/Beurre.png" }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Poke Bowl au Saumon",
+      "category": "Hawaiian",
+      "description": "Bol frais avec riz, saumon mariné, avocat, mangue et edamame.",
+      "price": 58.00,
+      "image": "images/plats/Poke Bowl au Saumon.svg",
+      "ingredients": [
+        { "name": "Saumon", "image": "images/ingredient/Saumon.png" },
+        { "name": "Avocat", "image": "images/ingredient/Avocat.png" },
+        { "name": "Mangue", "image": "images/ingredient/Mangue.png" }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Baklava",
+      "category": "Italian",
+      "description": "Feuilleté sucré aux couches de phyllo, noix et sirop au miel.",
+      "price": 22.00,
+      "image": "images/plats/Baklava.svg",
+      "ingredients": [
+        { "name": "Noix", "image": "images/ingredient/Noix.png"},
+        { "name": "Phyllo", "image": "images/ingredient/Phyllo.png"},
+        { "name": "Miel", "image": "images/ingredient/Miel.png"}
+      ]
+    }
+  ]
+}

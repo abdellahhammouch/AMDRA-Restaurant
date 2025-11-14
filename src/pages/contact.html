@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+      <div class="grid grid-cols-[1fr_100px_1fr] items-center">
+        <div class="relative pl-2">
+          <!--logo burger menu  -->
+          <span
+            id="nav__burgermnuicon"
+            class="flex md:hidden flex-wrap w-8 hover:"
+          >
+            <span class="bg-black mb-1.5 h-1 w-full"></span>
+            <span
+              id="burgermenu__anim"
+              class="bg-black mb-1.5 h-1 w-3/5 transition-all duration-300"
+            ></span>
+            <span class="bg-black mb-1.5 h-1 w-full"></span>
+          </span>
+
+          <!-- lien d les pages lackren -->
+          <ul
+            id="nav__listul"
+            class="hidden md:flex justify-evenly absolute md:static flex-col md:flex-row bg-black md:bg-transparent left-0 top-10 md:w-auto shadow-md md:shadow-none ml-2"
+          >
+            <li
+              class="text-white md:text-orange-500 border-b-2 md:border-none border-white"
+            >
+              <a href="/index.html">Home</a>
+            </li>
+            <li
+              id=""
+              class="text-white md:text-gray-700 border-b-2 md:border-none border-white"
+            >
+              <a href="/src/pages/menu.html">Menu</a>
+            </li>
+            <li class="text-white md:text-gray-700 border-b-2 md:border-none border-white">
+              <a href="#">About/Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- logo de resteu -->
+        <div class="justify-items-center">
+          <img
+            src="/src/images/AMDRA__logo.png"
+            alt="logo-amdra"
+            class="h-20"
+          />
+        </div>
+        <div class="justify-self-end p-5">
+          <svg
+            id="navpanier__logo"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="size-6 cursor-pointer "
+          >
+            <path
+              d="M6 7h12a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1Z"
+            />
+            <path d="M9 7V6a3 3 0 0 1 6 0v1" />
+          </svg>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- hade sections d panier m9da abach tban ta tkmel mn ba3d b js dylha -->
+   <section id="opensection__panierpage" class="fixed top-0 -right-full  h-screen transition-all duration-700 z-50 ">
+      <div class="relative h-screen w-[60vw] md:w-[45vw] bg-gray-100 shadow-2xl p-4 ">
+
+        <div class="flex justify-between items-center mb-7">
+          <h2 class="text-2xl">My order</h2>
+          <svg id="closesection__panierpage" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 cursor-pointer pr-2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+
+        </div>
+
+        <!-- blasaa dyal ga3 les order lakhren ta tgad b js -->
+        <div class="h-[60vh] overflow-y-scroll ">
+          <div id="placeofpurchases">
+          
+          </div>
+        </div>
+         
+        
+    
+        <!-- lhseab d lpanier kamla ta aydar f js -->
+        <div class="h-[20vh] overflow-y-scroll ">
+          <div id="priceplace" >
+            
+          </div>
+          <div id="totalprice" class="">
+            
+          </div>
+        </div>
+
+        <!-- button de confirmer li aydek lpages payment -->
+        <div class="absolute bottom-6 w-[calc(100%-2rem)] flex justify-center">
+          <button id="condirmererPurshach" class=" w-3/4  bg-orange-500 text-center text-xl p-3.5 rounded-3xl text-white  ">Checkout</button>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <section class="presentationServicesRestaurant ">
+    <div class="grid items-center justify-around ">
+      <h2 class="text-center text-4xl finger-font my-5 ">
+        Our Restaurant
+      </h2>
+      <div class="grid lg:grid-cols-2   sm:grid-cols-1  md:grid-cols-1 justify-items-center ">
+        <img src="../images/presenttionRestaurantGif.gif" class="rounded-2xl w-9/12  sm:w-10/12 md:w-9/12 mx-auto mt-3 lg:w-9/12 h-9/12"
+        style="height: 320px;" alt="presenttion restaurant gif">
+        <div class="flex flex-col gap-7">
+          <h3 class="finger-font text-3xl text-center mt-5">AMDRA Restaurant</h3>
+          <p class="text-justify afacad-font max-w-[400px] leading-8 text-gray-600 text-xl">
+            Bienvenue au AMDRA Restaurant, une véritable invitation au voyage culinaire. Niché au cœur d’un cadre
+            chaleureux
+            et raffiné, AMDRA allie tradition et modernité pour offrir une expérience gustative unique. Notre cuisine
+            met
+            à
+            l’honneur des produits frais, locaux et de saison, sublimés par le savoir-faire de nos chefs passionnés.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    <section class="containerCards block justify-items-center mt-5">
+        <h2 class="notreequipe text-center finger-font text-3xl my-15">Notre équipe</h2>
+        <div class="chefsContainer block">
+            <div
+                class="chefs doae sousChefs w-70.5 h-95 my-7 relative block justify-items-center rounded-2xl bg-white p-5">
+                <div class="imageChefContainer mb-3">
+                    <img src="../images/chefs/doaechemchaouichef.png" alt="Doae Chemchaoui" />
+                </div>
+                <h3 class="chefName">Doae Chemchaoui</h3>
+                <p class="roleChef">Sous-Chef</p>
+            </div>
+            <div
+                class="chefs amine sousChefs w-70.5 h-95 my-7 relative block justify-items-center rounded-2xl bg-white p-5">
+                <div class="imageChefContainer mb-3">
+                    <img src="../images/chefs/amineelgainichef.png" alt="Amine Elgaini" />
+                </div>
+                <h3 class="chefName">Amine Elgaini</h3>
+                <p class="roleChef">Sous-Chef</p>
+            </div>
+            <div
+                class="chefs chef abdelah w-70.5 h-95 my-7 relative block justify-items-center rounded-2xl bg-white p-5">
+                <div class="imageChefContainer mb-3">
+                    <img src="../images/chefs/abdellahhammouchchef.png" alt="Abdellah Hammouch" />
+                </div>
+                <h3 class="chefName">Abdellah Hammouch</h3>
+                <p class="roleChef">Chef</p>
+            </div>
+            <div
+                class="chefs sousChefs maria w-70.5 h-95 my-7 relative block justify-items-center rounded-2xl bg-white p-5">
+                <div class="imageChefContainer mb-3">
+                    <img src="../images/chefs/mariaelgotbychef.png" alt="Maria Elgotby" />
+                </div>
+                <h3 class="chefName">Maria Elgotby</h3>
+                <p class="roleChef">Sous-Chef</p>
+            </div>
+            <div
+                class="chefs sousChefs reda w-70.5 h-95 my-7 relative block justify-items-center rounded-2xl bg-white p-5">
+                <div class="imageChefContainer mb-3">
+                    <img src="../images/chefs/abdellahhammouchchef.png" alt="Reda ELguemry" />
+                </div>
+                <h3 class="chefName">Reda Elguemry</h3>
+                <p class="roleChef">Sous-Chef</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="containerFormulaire mt-20">
+        <div
+            class="formulaireContainer block place-self-center justify-items-center rounded-3xl w-75 py-4 px-4 bg-[#F2E5EE] ">
+            <div class="ConactNous block">
+                <h2 class="contacterNous finger-font text-center text-3xl my-7">CONTACTER NOUS</h2>
+                <div class="pContainer block justify-items-center text-[#F59124]">
+                    <p class="questionContact ">Une question ?</p>
+                    <p class="contactQuestionNous">Contacter-nous !</p>
+                </div>
+            </div>
+            <div class="formConatiner block justify-center w-full">
+                <div class="place-self-center my-8 w-[90%]">
+                    <label for="name"></label>
+                    <input type="text" class="rounded-lg bg-white w-full h-8.5 pl-2 placeholder-gray-400 Nom"
+                        placeholder="Full Name" name="Nom" required>
+                    <!-- <span class="errorName"></span> -->
+                </div>
+                <div class="place-self-center my-8 w-[90%]">
+                    <label for="email"></label>
+                    <input type="email" class=" rounded-lg bg-white w-full h-8.5 pl-2 placeholder-gray-400 Email"
+                        placeholder="Email" name="Email" required>
+                    <!-- <span class="errorEmail"></span> -->
+                </div>
+                <div class="place-self-center my-8 w-[90%]">
+                    <label for="phone"></label>
+                    <input type="tel" class="rounded-lg bg-white w-full h-8.5 pl-2 placeholder-gray-400 telephone"
+                        placeholder="Telephone" name="telephone" required>
+                    <!-- <span class="errorTelephone"></span> -->
+                </div>
+                <div class="place-self-center my-8 w-[90%]">
+                    <label for="message"></label>
+                    <input type="text" class="rounded-lg bg-white w-full h-8.5 pl-2 placeholder-gray-400 Message"
+                        placeholder="Message" name="Message" required>
+                </div>
+                <span class="errorSpan"></span>
+            </div>
+            <div class="submitButton mb-20">
+                <button class="submitbtn w-32 h-8 rounded-lg bg-[#F59124]">
+                    Submit
+                </button>
+            </div>
+            <div class="informationContainer">
+                <div class="phoneNumber flex my-4">
+                    <div class="phoneIcon bg-[#F59124] flex justify-around rounded-4xl w-12.5 h-12.5 mr-3">
+                        <i class="fa-solid fa-phone fa-xl self-center" style="color: #000000;"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold">Téléphone</p>
+                        <p class="text-sm text-[#555555]">+64 958 248 966</p>
+                    </div>
+                </div>
+                <div class="emailAdresse flex my-4">
+                    <div class="phoneIcon bg-[#F59124] flex justify-around rounded-4xl w-12.5 h-12.5 mr-3">
+                        <i class="fa-solid fa-envelopes-bulk fa-xl self-center" style="color: #000000;"></i>
+                    </div>
+                    <div class="block">
+                        <p class="font-bold">Email</p>
+                        <p class="text-sm text-[#555555]">exemple@gmail.com</p>
+                    </div>
+                </div>
+                <div class="lieuAdresse flex my-4">
+                    <div class="phoneIcon bg-[#F59124] flex justify-around rounded-4xl w-12.5 h-12.5 mr-3">
+                        <i class="fa-solid fa-location-dot fa-xl self-center" style="color: #000000;"></i>
+                    </div>
+                    <div class="block">
+                        <p class="font-bold">Adresse</p>
+                        <p class="text-[#555555] text-sm">Rue12, Bv.Mohammed V, Safi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="fanMapContainer block justify-items-center h-fit w-full my-15 px-5">
+        <div class="faqContainer bg-[#F59124] w-[50%] p-5 rounded-2xl">
+            <h2 class="finger-font text-xl mb-2">Vos questions, nos réponses</h2>
+            <p class="question font-bold">1. Comment passer une commande ?</p>
+            <p class="reponse text-[#555555] ">Vous pouvez commander directement sur place ou par téléphone.</p>
+            <p class="question font-bold">2. Quels sont les délais de préparation ?</p>
+            <p class="reponse text-[#555555] "> Environ 15 à 20 minutes selon la commande.</p>
+            <p class="question font-bold">3. Proposez-vous la livraison ?</p>
+            <p class="reponse text-[#555555] "> Oui, nous livrons dans tout Safi</p>
+            <p class="question font-bold">4. Peut-on récupérer une commande sur place ?</p>
+            <p class="reponse text-[#555555] "> Oui, le retrait est disponible au restaurant.</p>
+            <p class="question font-bold">5. Quels moyens de paiement acceptez-vous ?</p>
+            <p class="reponse text-[#555555] "> Espèces et paiement à la livraison.</p>
+        </div>
+        <div class="mapContainer w-[70%] h-80 relative bottom-3">
+            <iframe class="mapFrame w-full h-full"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8737.80499007308!2d-9.234990613902948!3d32.281277515217965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2sma!4v1762991302473!5m2!1sfr!2sma"
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+    
+   <!-- cest la section du reseaux sociau -->
+  <div
+    class="reasauSociaux  bg-pink-100 w-14 h-80 grid justify-center items-center rounded-2xl fixed shadow-2xl" style="top: 213px;">
+    <a href="#"><img src="../images/whatssap-reseausociaux.svg" class="w-10 transition-transform duration-500  hover:scale-120"
+      alt="whatssap"></a>
+    <a href="#"><img src="../images/instagram-reseausociaux.svg" class="w-10 transition-transform duration-500  hover:scale-120"
+      alt="instagram"></a>
+    <a href="#"><img src="../images/facebook-reseausociaux.png" class="w-10 transition-transform duration-500  hover:scale-120"
+      alt="facebook"></a>
+    <a href="#"><img src="../images/discord-reseauseciaux.svg" class="w-10 transition-transform duration-500  hover:scale-120"
+      alt="discord"></a>
+    <a href="#"><img src="../images/twiter-reseausociau.svg" class="w-10 transition-transform duration-500  hover:scale-120"
+      alt="twiter"></a>
+  </div>
+
+
+    <footer class="mt-10 pt-4 bg-[#F9F4F8]">
+      <div class="imgContainerFooterDesktop w-[350px] hidden">
+        <img src="src/images/Fattoush salad.png" alt="plat Footer Desktop" />
+      </div>
+      <div class="descriptionFooterContainer">
+        <p class="DescriptionFooter w-60 place-self-center py-4">
+          In the new era of technology we look a in the future with certainty
+          and pride to for our company.
+        </p>
+        <div
+          class="iconsContainerFooter place-self-center py-4 mt-10 flex gap-x-18"
+        >
+          <img src="src/images/icon _facebook_Footer.png" alt="logo-facebook" />
+          <img
+            src="src/images/icon _instagram_Footer.png"
+            alt="logo instagram"
+          />
+          <img src="src/images/icon _twitter_Footer.png" alt="logo twitter" />
+          <img src="src/images/icon _youtube_Footer.png" alt="logo youtube" />
+        </div>
+      </div>
+      <div class="mainInfoContainerFooter pb-7 px-3 flex justify-between">
+        <div class="mainMenuContainerFooter">
+          <h3 class="pb-5">Main Menu</h3>
+          <p class="py-2">Home</p>
+          <p class="py-2">Menu</p>
+          <p class="py-2">About/Contact</p>
+        </div>
+        <div class="restauInfoContainerFooter">
+          <h3 class="pb-5">Restaurant Info</h3>
+          <p class="py-2">Profile</p>
+          <p class="py-2">Blog</p>
+          <p class="py-2">Careers</p>
+          <p class="py-2">Location</p>
+        </div>
+        <div class="contactUsContainerFooterTablette hidden">
+          <h3 class="pb-5">Contact Us</h3>
+          <p class="py-2">amdra_restaurant@gmail.com</p>
+          <p class="py-2">+212 6-39384991</p>
+          <p class="py-2">Social Media</p>
+          <p class="py-2">Licenses</p>
+        </div>
+      </div>
+      <div class="imgContactContainerFooter flex gap-10">
+        <div class="imgContainerFooterMobile">
+          <img src="src/images/Fattoush salad1.png" alt="plat footer Mobile" />
+        </div>
+        <div class="contactUsContainerFooter mt-20">
+          <h3 class="pb-5">Contact Us</h3>
+          <p class="py-2">amdra_restaurant@gmail.com</p>
+          <p class="py-2">+212 6-39384991</p>
+          <p class="py-2">Social Media</p>
+          <p class="py-2">Licenses</p>
+        </div>
+        <div class="amdraRestauContainerFooterTablette mt-4 hidden">
+          <h1 class="amdraRestauFooter mr-5">AMDRA</h1>
+          <h1 class="amdraRestauFooter" id="restaurantFooter">RESTAURANT</h1>
+        </div>
+      </div>
+      <div class="amdraRestauContainerFooter hidden">
+        <h1 class="amdraRestauFooter mr-5">AMDRA</h1>
+        <h1 class="amdraRestauFooter" id="restaurantFooter">RESTAURANT</h1>
+      </div>
+    </footer>
+
+
+
+
+    <script src="../validationFormContact.js"></script>
+  <script src="/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover AMDRA Restaurant, where tradition meets modern cuisine. Enjoy a warm ambiance, fresh local ingredients, and an unforgettable culinary experience crafted by passionate chefs."
+    />
+    <meta
+      name="keywords"
+      content="restaurant, AMDRA, dining, catering, fast delivery, online ordering, gift cards, culinary experience, fresh food, modern cuisine"
+    />
+    <link href="./../output.css" rel="stylesheet" />
+    <title>AMDRA | Menu</title>
+    <style>
+      .carousel-container {
+        width: 100%;
+        max-width: 1200px;
+        position: relative;
+      }
+
+      .carousel-wrapper {
+        overflow: hidden;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 40px 20px;
+      }
+
+      .carousel-track {
+        display: flex;
+        transition: transform 0.4s ease-in-out;
+        gap: 20px;
+      }
+
+      .card {
+        flex: 0 0 calc(33.333% - 14px);
+        background: white;
+        border-radius: 20px;
+        padding: 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      .card-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        background: #f5f5f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 80px;
+      }
+
+      .card-content {
+        padding: 24px;
+        text-align: center;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card h3 {
+        color: #1a1a1a;
+        margin-bottom: 8px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .card p {
+        color: #666;
+        line-height: 1.5;
+        font-size: 14px;
+        margin: 0;
+      }
+
+      .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: white;
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        transition: all 0.3s ease;
+        z-index: 10;
+      }
+
+      .carousel-btn:hover {
+        background: #667eea;
+        color: white;
+        transform: translateY(-50%) scale(1.1);
+      }
+
+      .carousel-btn:active {
+        transform: translateY(-50%) scale(0.95);
+      }
+
+      .carousel-btn.prev {
+        left: 15px;
+      }
+
+      .carousel-btn.next {
+        right: 15px;
+      }
+
+      .carousel-btn:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+
+      .carousel-btn:disabled:hover {
+        background: white;
+        color: black;
+        transform: translateY(-50%) scale(1);
+      }
+
+      /* Tablet */
+      @media (max-width: 1024px) {
+        .card {
+          flex: 0 0 calc(50% - 10px);
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 640px) {
+        .card {
+          flex: 0 0 100%;
+        }
+
+        .carousel-wrapper {
+          padding: 30px 15px;
+        }
+
+        .carousel-btn {
+          width: 40px;
+          height: 40px;
+          font-size: 16px;
+        }
+
+        .carousel-btn.prev {
+          left: 15px;
+        }
+
+        .carousel-btn.next {
+          right: 15px;
+        }
+      }
+    </style>
+
+    <style>
+      @media (min-width: 700px) {
+        .hero .images img {
+          max-width: 150px;
+          height: 150px;
+        }
+        .hero .images {
+          width: 150px;
+          height: 150px;
+        }
+      }
+
+      .hero .images {
+        width: 400px;
+        height: 400px;
+        position: relative;
+      }
+
+      .hero .images img {
+        position: absolute;
+        z-index: 10;
+        max-width: 400px;
+        height: 400px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body class="">
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+      <div class="grid grid-cols-[1fr_100px_1fr] items-center">
+        <div class="relative pl-2">
+          <!--logo burger menu  -->
+          <span
+            id="nav__burgermnuicon"
+            class="flex md:hidden flex-wrap w-8 hover:"
+          >
+            <span class="bg-black mb-1.5 h-1 w-full"></span>
+            <span
+              id="burgermenu__anim"
+              class="bg-black mb-1.5 h-1 w-3/5 transition-all duration-300"
+            ></span>
+            <span class="bg-black mb-1.5 h-1 w-full"></span>
+          </span>
+
+          <!-- lien d les pages lackren -->
+          <ul
+            id="nav__listul"
+            class="hidden md:flex justify-evenly absolute md:static flex-col md:flex-row bg-black md:bg-transparent left-0 top-10 md:w-auto shadow-md md:shadow-none ml-2"
+          >
+            <li
+              class="text-white md:text-limoni border-b-2 md:border-none border-white"
+            >
+              <a href="/index.html">Home</a>
+            </li>
+            <li
+              id=""
+              class="text-white md:text-gray-700 border-b-2 md:border-none border-white"
+            >
+              <a href="#">Menu</a>
+            </li>
+            <li class="text-white md:text-gray-700 border-b-2 md:border-none border-white">
+              <a href="/src/pages/contact.html">About/Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- logo de resteu -->
+        <div class="justify-items-center">
+          <img
+            src="/src/images/AMDRA__logo.png"
+            alt="logo-amdra"
+            class="h-20"
+          />
+        </div>
+        <div class="justify-self-end p-5">
+          <svg
+            id="navpanier__logo"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="size-6 cursor-pointer "
+          >
+            <path
+              d="M6 7h12a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1Z"
+            />
+            <path d="M9 7V6a3 3 0 0 1 6 0v1" />
+          </svg>
+          </div>
+        </div>
+      </div>
+    </nav>
+   <section id="opensection__panierpage" class="fixed top-0 -right-full  h-screen transition-all duration-700 z-50 ">
+      <div class="relative h-screen w-[60vw] md:w-[45vw] bg-gray-100 shadow-2xl p-4 ">
+        <div class="flex justify-between items-center mb-7">
+          <h2 class="text-2xl">My order</h2>
+          <svg
+            id="closesection__panierpage"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-8 cursor-pointer pr-2.5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </div>
+
+        <!-- blasaa dyal ga3 les order lakhren ta tgad b js -->
+        <div class="h-[60vh] overflow-y-scroll">
+          <div id="placeofpurchases"></div>
+        </div>
+
+        <!-- lhseab d lpanier kamla ta aydar f js -->
+        <div class="h-[20vh] overflow-y-scroll">
+          <div id="priceplace"></div>
+          <div id="totalprice" class=""></div>
+        </div>
+
+        <!-- button de confirmer li aydek lpages payment -->
+        <div class="absolute bottom-6 w-[calc(100%-2rem)] flex justify-center">
+          <button
+            id="condirmererPurshach"
+            class="w-3/4 bg-orange-500 text-center text-xl p-3.5 rounded-3xl text-white"
+          >
+            Checkout
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="hero flex-wrap bg-ghoz px-10 py-32 min-h-screen flex justify-evenly items-center"
+    >
+      <h1 class="self-start text-4xl font-bold text-gray-800">
+        Nos Plats<br />
+        Spéciaux
+      </h1>
+      <div class="images"></div>
+      <div class="buttons flex flex-col gap-3"></div>
+    </section>
+
+    <section class="carousel-container mx-auto">
+      <button class="carousel-btn prev" id="prevBtn">‹</button>
+
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="carouselTrack"></div>
+      </div>
+
+      <button class="carousel-btn next" id="nextBtn">›</button>
+    </section>
+
+    <h2 class="inter-font font-bold text-xl w-40 ml-35 my-6">Standout Dishes From Our Menu</h2>
+    <div class="serachAndFillter flex justify-around  items-center">
+
+      <div class="inputSearch relative">
+        <input
+          type="text"
+          class="input border rounded-xl w-45 -ml-9 h-7 inputSearch pl-8 text-[12px] text-gray-800"
+          placeholder="entrer le nom du plat"
+        />
+        <img
+          src="../images/search-icon.svg"
+          class="absolute top-2 -left-5 w-3"
+          alt="this icon for search"
+        />
+      </div>
+      
+<div class="btnFilter w-[375px] flex justify-between hidden md:block ">
+            <button class="btnAll bg-black text-white w-22 h-7 rounded-[10px] cursor-pointer">All</button>
+            <button class="MoroccanCategorie  text-black border w-22 rounded-[10px] cursor-pointer">Moroccan</button>
+            <button class="ItalianCategorie  text-black border w-22 rounded-[10px] cursor-pointer">Italian</button>
+            <button class="MexicanCategorie  text-black border w-22 rounded-[10px] cursor-pointer">Mexican</button>
+        </div>
+
+
+ <div class="btnFilter w-1/3 flex justify-evenly  h-7 rounded-[10px] md:hidden">
+            <select name="" id="" class="categorieSelect w-45 border rounded-xl">
+                <option class="" value="All">All</option>
+                <option class="" value="Moroccan">Moroccan</option>
+                <option class="" value="Italian">Italian</option>
+                <option class="" value="Mexican">Mexican</option>
+            </select>
+        </div>
+
+
+
+    </div>
+
+    <section
+      class="cards grid grid-cols-1 justify-items-center gap-y-5 sm:grid-cols-2 lg:grid-cols-3"
+    ></section>
+
+    <div class="pagination flex justify-center items-center gap-5 pt-20 pb-20">
+      <span class="left-pagination"
+        ><img
+          class="w-[30px]"
+          src="./../images/pagination/left-pagination.png"
+          alt=""
+      /></span>
+      <span class="right-pagination"
+        ><img
+          class="w-[30px]"
+          src="./../images/pagination/right-pagination.png"
+          alt=""
+      /></span>
+    </div>
+
+    <script src="./../js/promotion.js"></script>
+    <script src="./../js/main.js"></script>
+    <script src="/script.js"></script>
+    <script src="../lesPlatdisponible.js"></script>
+  </body>
+</html>
