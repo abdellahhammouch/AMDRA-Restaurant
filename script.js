@@ -1,3 +1,4 @@
+// function x() {
 
 const iconburgermeu = document.getElementById("nav__burgermnuicon");
 const navlist = document.getElementById("nav__listul")
@@ -82,10 +83,11 @@ document.querySelector("#placeofpurchases").addEventListener("click" , (e) => {
     afiichdatapanier()
     }
 
-    if(e.target.closest(".increse")){
-    const incqonti = e.target.closest(".increse");
-    const cart = homepanier.find((item) => item.id == incqonti.dataset.id && item.size == incqonti.dataset.size);
-    
+    if(e.target.closest(".increse")){    
+    let incqonti = e.target.closest(".increse");
+    let cart = homepanier.find((item) => item.id == incqonti.dataset.id && item.size == incqonti.dataset.size);
+    console.log(cart + incqonti.dataset.id + incqonti.dataset.size);
+    console.log(homepanier)
     if(cart.quantity > 1){
       cart.quantity-- ;
       const spanmod = incqonti.closest("div").querySelector(".quantityafficher");
@@ -141,3 +143,5 @@ function pricepanier(){
 document.querySelector("#condirmererPurshach").addEventListener("click" , (e) => {
   location.href = "/src/pages/payment.html"
 })
+// }
+// x();
